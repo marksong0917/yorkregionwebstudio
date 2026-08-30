@@ -1,5 +1,6 @@
-// Mobile navigation accessibility and active Web3Forms AJAX submission
+// Mobile navigation accessibility and Web3Forms async submission
 document.addEventListener('DOMContentLoaded', () => {
+    // Navigation toggle
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
 
@@ -14,59 +15,66 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            if (navMenu.classList.contains('active')) {
+            if (navMenu && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
                 if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
             }
         });
     });
 
-    // Handle AJAX Contact Form Submission
+    // Web3Forms Form Submission with async/await and button loading state
     const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
     const result = document.getElementById('formResult');
 
     if (form) {
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const formData = new FormData(form);
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
+
+            const originalBtnText = submitBtn ? submitBtn.textContent : "Send Message";
+            if (submitBtn) {
+                submitBtn.textContent = "Sending...";
+                submitBtn.disabled = true;
+            }
 
             if (result) {
                 result.style.display = 'block';
-                result.innerHTML = 'Sending message...';
                 result.style.color = '#cbd5e1';
+                result.textContent = "Submitting your message...";
             }
 
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response) => {
-                let json = await response.json();
-                if (response.status == 200) {
+            try {
+                const formData = new FormData(form);
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.success) {
                     if (result) {
-                        result.innerHTML = '&#10004; Message sent successfully! I will contact you shortly.';
-                        result.style.color = '#10b981';
+                        result.style.color = "#10b981";
+                        result.innerHTML = "&#10004; Thank you! Your message has been sent directly to Mark.";
                     }
                     form.reset();
                 } else {
                     if (result) {
-                        result.innerHTML = json.message || 'Error sending message. Please call directly.';
-                        result.style.color = '#ef4444';
+                        result.style.color = "#ef4444";
+                        result.textContent = data.message || "Error submitting form. Please try again.";
                     }
                 }
-            })
-            .catch(error => {
+            } catch (error) {
                 if (result) {
-                    result.innerHTML = 'Something went wrong! Please call (289) 500-5666.';
-                    result.style.color = '#ef4444';
+                    result.style.color = "#ef4444";
+                    result.textContent = "Connection error. Please call directly at (289) 500-5666.";
                 }
-            });
+            } finally {
+                if (submitBtn) {
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.disabled = false;
+                }
+            }
         });
     }
 });

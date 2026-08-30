@@ -272,7 +272,7 @@
                         <h3>Send a Direct Message</h3>
                         <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
                             <input type="hidden" name="access_key" value="3f63b007-996e-4bd0-b3d5-812fcb5ec5db">
-                            <input type="hidden" name="subject" value="New Inquiry from York Region Web Studio">
+                            <input type="hidden" name="subject" value="New Lead - York Region Web Studio">
                             <input type="hidden" name="from_name" value="York Region Web Studio Site">
                             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
@@ -291,7 +291,7 @@
                             <div class="form-group">
                                 <label for="package">Preferred Package</label>
                                 <select id="package" name="package" class="form-select">
-                                    <option value="Level 1 ($299 CAD + $29/mo)">Level 1 - Starter Landing Page ($299 CAD)</option>
+                                    <option value="Level 1 ($299 CAD)">Level 1 - Starter Landing Page ($299 CAD)</option>
                                     <option value="Level 2 ($499 CAD + $29/mo)">Level 2 - Essential Business ($499 CAD + $29/mo)</option>
                                     <option value="Level 3 ($799 CAD + $59/mo)" selected>Level 3 - Professional Growth ($799 CAD + $59/mo)</option>
                                     <option value="Level 4 ($1,299 CAD + $99/mo)">Level 4 - Premium Complete ($1,299 CAD + $99/mo)</option>
@@ -301,7 +301,7 @@
                                 <label for="message">Project Details</label>
                                 <textarea id="message" name="message" rows="3" required placeholder="Tell me briefly about your business..."></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                            <button type="submit" id="submitBtn" class="btn btn-primary btn-block">Send Message</button>
                             <div id="formResult" class="form-result" aria-live="polite"></div>
                         </form>
                     </div>
