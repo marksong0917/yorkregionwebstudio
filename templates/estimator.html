@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>NEWOOD Cabinetry Estimator</title>
+    <style>
+        :root {
+            --bg-color: #0F172A;
+            --card-bg: #1E293B;
+            --card-border: #334155;
+            --accent-blue: #38BDF8;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --green-bg: #064E3B;
+            --green-border: #059669;
+            --green-text: #34D399;
+            --error-bg: #881337;
+            --error-border: #F43F5E;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html { -webkit-text-size-adjust: 100%; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 24px 16px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+            flex: 1 0 auto;
+        }
+
+        header { text-align: center; margin-bottom: 24px; }
+        header h1 { font-size: clamp(20px, 4vw, 26px); font-weight: 700; margin: 0; color: var(--accent-blue); }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .card h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-blue);
+            margin: 0 0 14px 0;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 8px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+        }
+
+        .form-group { display: flex; flex-direction: column; }
+        .form-group label { font-size: 12px; font-weight: 600; color: var(--text-muted); margin-bottom: 4px; }
+        .form-group input {
+            background-color: #0F172A;
+            border: 1px solid var(--card-border);
+            border-radius: 6px;
+            color: #FFFFFF;
+            padding: 12px;
+            font-size: 16px;
+            outline: none;
+            width: 100%;
+            touch-action: manipulation;
+        }
+        .form-group input:focus { border-color: var(--accent-blue); }
+
+        .btn-calc {
+            width: 100%;
+            background-color: var(--accent-blue);
+            color: #0F172A;
+            border: none;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            min-height: 48px;
+            touch-action: manipulation;
+        }
+        .btn-calc:active { opacity: 0.8; }
+
+        .error-banner {
+            display: none;
+            background-color: var(--error-bg);
+            border: 1px solid var(--error-border);
+            color: #FFE4E6;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        .results-container { display: none; margin-top: 20px; }
+
+        .footage-bar {
+            background: #0F172A;
+            border: 1px solid var(--card-border);
+            padding: 14px 16px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-around;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 16px;
+            color: var(--accent-blue);
+            flex-wrap: wrap;
+        }
+
+        .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+        .price-card {
+            background-color: var(--green-bg);
+            border: 1px solid var(--green-border);
+            border-radius: 10px;
+            padding: 16px 12px;
+            text-align: center;
+        }
+        .price-card h3 { margin: 0 0 6px 0; font-size: 12px; color: #A7F3D0; text-transform: uppercase; }
+        .price-card .amount { font-size: clamp(18px, 3.5vw, 24px); font-weight: 800; color: var(--green-text); }
+
+        footer {
+            text-align: center;
+            margin-top: 32px;
+            padding: 16px 0;
+            border-top: 1px solid var(--card-border);
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 16px 10px; }
+            .grid { grid-template-columns: repeat(2, 1fr); }
+            .price-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>NEWOOD Cabinetry Estimator</h1>
+    </header>
+
+    <div id="errorBanner" class="error-banner" role="alert" aria-live="assertive"></div>
+
+    <main>
+        <section class="card">
+            <h2>Dimensions</h2>
+            <div class="grid">
+                <div class="form-group"><label for="wall1">Wall 1 (in)</label><input type="number" id="wall1" value="180" inputmode="decimal"></div>
+                <div class="form-group"><label for="wall2">Wall 2 (in)</label><input type="number" id="wall2" value="120" inputmode="decimal"></div>
+                <div class="form-group"><label for="wall3">Wall 3 (in)</label><input type="number" id="wall3" value="0" inputmode="decimal"></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Appliances & Corners</h2>
+            <div class="grid">
+                <div class="form-group"><label for="fridges">Fridges</label><input type="number" id="fridges" value="1" inputmode="numeric"></div>
+                <div class="form-group"><label for="stoves">Stoves</label><input type="number" id="stoves" value="1" inputmode="numeric"></div>
+                <div class="form-group"><label for="dishwashers">Dishwashers</label><input type="number" id="dishwashers" value="1" inputmode="numeric"></div>
+                <div class="form-group"><label for="hoods">Range Hoods</label><input type="number" id="hoods" value="1" inputmode="numeric"></div>
+                <div class="form-group"><label for="windows">Sink Windows</label><input type="number" id="windows" value="1" inputmode="numeric"></div>
+                <div class="form-group"><label for="base_corners">Base Corners</label><input type="number" id="base_corners" value="1" inputmode="numeric"></div>
+                <div class="form-group"><label for="wall_corners">Wall Corners</label><input type="number" id="wall_corners" value="1" inputmode="numeric"></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Components</h2>
+            <div class="grid">
+                <div class="form-group"><label for="drawers">Drawer Boxes</label><input type="number" id="drawers" value="6" inputmode="numeric"></div>
+                <div class="form-group"><label for="slides">Blum Slides</label><input type="number" id="slides" value="6" inputmode="numeric"></div>
+                <div class="form-group"><label for="base_panels">Base End Panels</label><input type="number" id="base_panels" value="2" inputmode="numeric"></div>
+                <div class="form-group"><label for="wall_panels">Wall End Panels</label><input type="number" id="wall_panels" value="2" inputmode="numeric"></div>
+                <div class="form-group"><label for="box_count">Total Cabinet Boxes</label><input type="number" id="box_count" value="10" inputmode="numeric"></div>
+            </div>
+        </section>
+
+        <button id="calcBtn" class="btn-calc" onclick="CabinetEstimator.calculateQuote()">Calculate Estimate</button>
+
+        <section class="results-container" id="resultsBlock" aria-live="polite">
+            <div class="footage-bar">
+                <span>Net Base Run: <strong id="outBaseLF">0</strong> LF</span>
+                <span>Net Wall Run: <strong id="outWallLF">0</strong> LF</span>
+            </div>
+
+            <div class="price-grid">
+                <article class="price-card">
+                    <h3>Slab Finish</h3>
+                    <div class="amount" id="outSlab">$0.00</div>
+                </article>
+                <article class="price-card">
+                    <h3>Thermofoil Finish</h3>
+                    <div class="amount" id="outThermo">$0.00</div>
+                </article>
+                <article class="price-card">
+                    <h3>Painted Finish</h3>
+                    <div class="amount" id="outPaint">$0.00</div>
+                </article>
+            </div>
+        </section>
+    </main>
+</div>
+
+<footer>
+    <div>© NEWOOD Millworks 2026</div>
+    <div>Designed and Developed by Ze Song</div>
+    <div>Not for any use outside of NEWOODMILLWORK</div>
+</footer>
+
+<script>
+    const CabinetEstimator = (() => {
+        const FIELDS = ['wall1', 'wall2', 'wall3', 'fridges', 'stoves', 'dishwashers', 'hoods', 'windows', 'base_corners', 'wall_corners', 'drawers', 'slides', 'base_panels', 'wall_panels', 'box_count'];
+
+        const getVal = id => parseFloat(document.getElementById(id)?.value) || 0;
+        const fmt = val => '$' + Number(val).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+        const calculateQuote = async () => {
+            const btn = document.getElementById('calcBtn');
+            const errBanner = document.getElementById('errorBanner');
+            const resultsBlock = document.getElementById('resultsBlock');
+
+            errBanner.style.display = 'none';
+            btn.innerText = 'Calculating...';
+            btn.disabled = true;
+
+            const payload = FIELDS.reduce((acc, f) => ({ ...acc, [f]: getVal(f) }), {});
+
+            try {
+                const res = await fetch('/api/calculate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+                if (!res.ok || data.status === 'error') throw new Error(data.message || 'Calculation error');
+
+                document.getElementById('outBaseLF').innerText = data.net_base_lf;
+                document.getElementById('outWallLF').innerText = data.net_wall_lf;
+                document.getElementById('outSlab').innerText = fmt(data.slab_quote);
+                document.getElementById('outThermo').innerText = fmt(data.thermo_quote);
+                document.getElementById('outPaint').innerText = fmt(data.paint_quote);
+
+                resultsBlock.style.display = 'block';
+            } catch (err) {
+                errBanner.innerHTML = '<strong>Connection Error:</strong> Unable to process quote. Please check network connection or server status.';
+                errBanner.style.display = 'block';
+                resultsBlock.style.display = 'none';
+            } finally {
+                btn.innerText = 'Calculate Estimate';
+                btn.disabled = false;
+            }
+        };
+
+        return { calculateQuote };
+    })();
+</script>
+
+</body>
+</html>
