@@ -1,13 +1,15 @@
-// Mobile navigation accessibility and Web3Forms async submission
+// Strict Mode JavaScript Execution
+'use strict';
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Navigation toggle
+    // Accessible Mobile Navigation Toggle
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
 
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', () => {
             const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-            navToggle.setAttribute('aria-expanded', !isExpanded);
+            navToggle.setAttribute('aria-expanded', String(!isExpanded));
             navMenu.classList.toggle('active');
         });
     }
@@ -22,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Web3Forms Form Submission with async/await and button loading state
+    // Web3Forms Asynchronous Contact Form Submission
     const form = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
     const result = document.getElementById('formResult');
