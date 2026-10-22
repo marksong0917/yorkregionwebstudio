@@ -32,7 +32,7 @@
       "name": "CRM + Bot — CRM Web Application with Built-In Assistant for Trades",
       "provider": { "@type": "ProfessionalService", "name": "York Region Web Studio", "telephone": "289-500-5666", "url": "https://yorkregionwebstudio.com/" },
       "areaServed": ["York Region", "Greater Toronto Area"],
-      "description": "A lightweight CRM web application with a built-in assistant: lead tracking, lead-to-project conversion, project and production tracking, AR/AP invoicing, role-based login portal for team and customers, running on a local server in the client's office with secure online access.",
+      "description": "A trade CRM web application with a built-in assistant: lead tracking, lead-to-project conversion, project and production tracking, scheduling, team chat, and a role-based login portal for team and customers. Runs on a local server in the client's office — the client owns the data. Flat monthly plans with unlimited users, no per-seat fees.",
       "url": "https://yorkregionwebstudio.com/crm-bot.html"
     }
     </script>
@@ -50,7 +50,7 @@
         {
           "@type": "Question",
           "name": "How much does CRM + Bot cost?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Plans are priced by role, from Receptionist at $99/mo to Office Manager at $999/mo, plus a one-time setup priced as a range for your business. Your exact price is quoted in writing after a free 15-min call." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Plans are priced by role, from Receptionist at $99/mo to Office Manager at $999/mo, plus a one-time setup priced as a range for your business. One flat monthly fee covers your whole team — unlimited users, no per-seat charges. Pay annually and two months are free. Your exact price is quoted in writing after a free 15-min call." }
         },
         {
           "@type": "Question",
@@ -60,7 +60,7 @@
         {
           "@type": "Question",
           "name": "Do I own my data and the system?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes — the server and the data are yours, in your office. Export everything at any time. If you ever cancel, the monthly plan ends with 30 days' notice and your data stays with you." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — completely. The server sits in your office and the database is yours: your customers, your leads, your job history. Export everything at any time. If you ever cancel, you keep the database and the system keeps running on your office network. Your plan price is also locked for as long as you stay subscribed — it never goes up." }
         }
       ]
     }
@@ -97,16 +97,16 @@
         <section class="hero" aria-labelledby="hero-title">
             <div class="container hero-container">
                 <div class="hero-content">
-                    <h1 id="hero-title" class="hero-title">Leads in. Projects out. Money tracked.</h1>
+                    <h1 id="hero-title" class="hero-title">Leads in. Jobs out. Nothing lost.</h1>
                     <p class="hero-slogan">CRM + Bot — one web application for your whole office.</p>
                     <p class="hero-description">
-                        Track every lead, turn it into a project in one click, follow it through production, and keep invoicing tidy — AR and AP in one place. A built-in bot does the lookups and the drafting. Your team just keeps one website open.
+                        Track every lead, turn it into a project in one click, and follow it through production and install — with your whole team in one place. A built-in bot answers questions and makes updates in plain words. Your database lives on a server in your own office, and one flat monthly fee covers everyone — no per-seat rent, ever.
                     </p>
                     <div class="hero-actions">
                         <a href="#contact" class="btn btn-primary">Book a Free 15-Min Call</a>
                         <a href="#tiers" class="btn btn-secondary">See Plans &amp; Pricing</a>
                     </div>
-                    <p class="hero-note">Built for trades &amp; cabinetry shops &middot; Your database stays in your office &middot; Plans from $99/mo</p>
+                    <p class="hero-note">Built for trades &amp; cabinetry shops &middot; Your data stays in your office &middot; Unlimited users, no per-seat fees &middot; Plans from $99/mo</p>
                 </div>
             </div>
         </section>
@@ -191,7 +191,7 @@
                     <article class="card feature-card">
                         <div class="card-icon-wrapper" aria-hidden="true">&#128100;</div>
                         <h3>Customers</h3>
-                        <p>A limited view of their own job only — progress, shared files, invoices, and messages. Nothing internal, ever.</p>
+                        <p>A limited view of their own job only — progress, shared files, and messages. Nothing internal, ever.</p>
                     </article>
                 </div>
             </div>
@@ -201,21 +201,21 @@
         <section class="section bg-light" aria-labelledby="bot-title">
             <div class="container">
                 <div class="section-header">
-                    <h2 id="bot-title">The Bot Does the Busywork — Safely</h2>
-                    <p>Ask in plain words, right inside the portal. The rules are simple, and they are enforced by the system, not by trust.</p>
+                    <h2 id="bot-title">The Bot Does the Busywork</h2>
+                    <p>Ask or tell it in plain words, right inside the portal. Roles decide who can do what, and every change is written to the activity log.</p>
                 </div>
                 <div class="grid grid-3 process-grid">
                     <div class="card process-card">
                         <h3>Ask = Instant</h3>
-                        <p>"What's the balance on the Smith kitchen?" "Find the invoice." Lookups and files come back in seconds.</p>
+                        <p>"What stage is the Smith kitchen at?" "Who is on installs this week?" Answers come back in seconds.</p>
                     </div>
                     <div class="card process-card">
-                        <h3>Create = Draft + Approve</h3>
-                        <p>Invoices, orders, and quotes are prepared as drafts. Nothing is sent or committed until the owner approves it.</p>
+                        <h3>Tell It = Done</h3>
+                        <p>"Move the Smith job to install." "Add a task: order hinges, due Friday." It is done on the spot — no forms to hunt down.</p>
                     </div>
                     <div class="card process-card">
-                        <h3>Sensitive = Management Only</h3>
-                        <p>Pay, costs, and margins are never shown to staff screens, shop screens, or customers — and every action is logged.</p>
+                        <h3>Roles Keep It Clean</h3>
+                        <p>The shop sees production, customers see only their own job, and the office sees the whole picture. Every action is logged.</p>
                     </div>
                 </div>
             </div>
@@ -227,13 +227,16 @@
                 <div class="offer-card">
                     <span class="showcase-tag">Your Data, In Your Hands</span>
                     <h2 id="local-title">The Database Lives in Your Office. Not in a Cloud CRM.</h2>
-                    <p>CRM + Bot runs on a small server we set up in your office. The web application is reached online through a secure, encrypted connection — with no open ports. Your data never sits on some big platform, and there are no per-seat cloud fees.</p>
+                    <p>CRM + Bot runs on a small server we set up in your office. The web application is reached online through a secure, encrypted connection — with no open ports. Your customer list, your leads, your job history — that data is yours, and it never sits on some big platform's cloud. Other CRMs charge you per user, every month, for access to your own customers. We don't.</p>
                     <div class="guarantee-box">
                         <h3>What That Means for You</h3>
                         <p>&#10003; Your team keeps working on your office network, even if the internet drops.<br>
                         &#10003; Automatic backups every night, with restore checks.<br>
                         &#10003; You own the server and the data — export everything, any time.<br>
-                        &#10003; Login + role permissions on every screen, and a full activity log.</p>
+                        &#10003; Login + role permissions on every screen, and a full activity log.<br>
+                        &#10003; One flat monthly fee for your whole team — unlimited users, no per-seat charges.<br>
+                        &#10003; Your plan price is locked while you stay subscribed — it never goes up.<br>
+                        &#10003; If you ever cancel, you keep the database and the system keeps running on your office network.</p>
                     </div>
                     <p>Running live today at a Concord cabinetry shop — ask on the call and we will walk you through the real thing.</p>
                     <p><a href="#contact" class="btn btn-primary">Book a Free 15-Min Call</a></p>
@@ -246,7 +249,7 @@
             <div class="container">
                 <div class="section-header">
                     <h2 id="tiers-title">Plans Priced by Role</h2>
-                    <p>Start where your pain is. Every plan includes everything below it — and costs a fraction of hiring that role.</p>
+                    <p>Start where your pain is. Every plan includes everything below it, covers your whole team with <b>unlimited users</b>, and costs a fraction of hiring that role.</p>
                 </div>
                 <div class="grid grid-3 pricing-grid">
                     <article class="pricing-card">
@@ -269,8 +272,8 @@
                         <ul class="price-features">
                             <li>&#10003; Everything in Receptionist</li>
                             <li>&#10003; Lead &amp; project boards</li>
-                            <li>&#10003; Search customers, jobs, invoices</li>
-                            <li>&#10003; Status, balances &amp; file retrieval</li>
+                            <li>&#10003; Search customers, jobs &amp; files</li>
+                            <li>&#10003; Status updates &amp; file retrieval</li>
                         </ul>
                         <a href="#contact" class="btn btn-secondary btn-block package-cta" data-package="CRM + Bot — Clerk ($199/mo)">Choose Clerk</a>
                     </article>
@@ -292,12 +295,12 @@
                     <article class="pricing-card">
                         <h3>Administrator</h3>
                         <div class="price">$599 <span>CAD/mo</span></div>
-                        <div class="price-sub">Setup $3,500–$6,000. AR / AP handled with approval.</div>
+                        <div class="price-sub">Setup $3,500–$6,000. The whole operation, organized.</div>
                         <ul class="price-features">
                             <li>&#10003; Everything in Coordinator</li>
-                            <li>&#10003; Invoices, orders &amp; quotes — draft + approve</li>
-                            <li>&#10003; Receipt &amp; document filing</li>
-                            <li>&#10003; Work-hour entry &amp; tallies</li>
+                            <li>&#10003; Team roles &amp; member management</li>
+                            <li>&#10003; Inventory — materials, equipment, hardware</li>
+                            <li>&#10003; Full activity log &amp; owner reports</li>
                         </ul>
                         <a href="#contact" class="btn btn-secondary btn-block package-cta" data-package="CRM + Bot — Administrator ($599/mo)">Choose Administrator</a>
                     </article>
@@ -308,9 +311,9 @@
                         <div class="price-sub">Setup $6,000–$10,000, custom. The office, run.</div>
                         <ul class="price-features">
                             <li>&#10003; Everything in Administrator</li>
-                            <li>&#10003; Payroll prep &amp; AR follow-up lists</li>
+                            <li>&#10003; Multi-crew scheduling &amp; job checklists</li>
                             <li>&#10003; Weekly &amp; monthly owner reports</li>
-                            <li>&#10003; Proactive flags — overdue &amp; unpaid</li>
+                            <li>&#10003; Proactive flags — overdue tasks &amp; stalled jobs</li>
                         </ul>
                         <a href="#contact" class="btn btn-secondary btn-block package-cta" data-package="CRM + Bot — Office Manager ($999/mo)">Choose Office Manager</a>
                     </article>
@@ -329,7 +332,7 @@
                         <a href="#contact" class="btn btn-outline btn-block package-cta" data-package="CRM + Bot — 30-Day Clerk Pilot">Ask About the Pilot</a>
                     </article>
                 </div>
-                <p class="pricing-note">Setup is a custom range for your business — your exact price is quoted in writing after the call, before any work starts.</p>
+                <p class="pricing-note">Setup is a custom range for your business — your exact price is quoted in writing after the call, before any work starts. Optional: a pre-configured office server from us for $899, or we install on a PC you already have. Pay annually and two months are free. <b>Founding offer:</b> the first 5 shops get setup waived and their plan price locked for 2 years.</p>
             </div>
         </section>
 
@@ -347,7 +350,7 @@
                     </details>
                     <details class="faq-item">
                         <summary>How much does it cost in total?</summary>
-                        <p>Plans are priced by role, from Receptionist at $99/mo to Office Manager at $999/mo, plus a one-time setup priced as a range for your business. Your exact price is quoted in writing after a free 15-min call.</p>
+                        <p>Plans are priced by role, from Receptionist at $99/mo to Office Manager at $999/mo, plus a one-time setup priced as a range for your business. One flat monthly fee covers your whole team — unlimited users, no per-seat charges — and your price is locked for as long as you stay subscribed. Pay annually and two months are free. Your exact price is quoted in writing after a free 15-min call.</p>
                     </details>
                     <details class="faq-item">
                         <summary>How long does it take to set up?</summary>
@@ -355,7 +358,7 @@
                     </details>
                     <details class="faq-item">
                         <summary>Do I own my data and the system?</summary>
-                        <p>Yes — the server and the data are yours, in your office. Export everything at any time. If you ever cancel, the monthly plan ends with 30 days' notice and your data stays with you.</p>
+                        <p>Yes — completely. The server sits in your office and the database is yours: your customers, your leads, your job history. Export everything at any time. If you ever cancel, you keep the database and the system keeps running on your office network.</p>
                     </details>
                 </div>
             </div>
@@ -367,7 +370,7 @@
                 <div class="contact-wrapper">
                     <div class="contact-info">
                         <h2 id="contact-title">Fix the spreadsheet chaos.</h2>
-                        <p>One call, and we map your leads, projects, and invoicing into one clean system.</p>
+                        <p>One call, and we map your leads, projects, and production into one clean system — on a server in your office.</p>
                         <p class="response-promise">Replies usually land the same business day.</p>
                         <div class="contact-actions">
                             <a href="tel:2895005666" class="btn btn-primary">Call (289) 500-5666</a>
