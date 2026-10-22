@@ -325,3 +325,106 @@ p { color: var(--text-muted); font-size: 1rem; }
     .nav-menu.active { display: flex; }
     .footer-top, .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
 }
+
+/* ============================================================
+   2026 REVAMP LAYER — modern design system refresh (2026-10-22)
+   ============================================================ */
+:root {
+    --navy-900: #0b1220;
+    --navy-800: #101d38;
+    --blue-600: #2563eb;
+    --blue-400: #60a5fa;
+    --radius: 16px;
+    --shadow-lg: 0 24px 48px -12px rgba(2, 6, 23, 0.18);
+    --shadow-md: 0 12px 28px -8px rgba(2, 6, 23, 0.12);
+}
+
+/* Dark gradient hero with soft glows + fine grid */
+.hero {
+    background:
+        radial-gradient(640px 320px at 18% -60px, rgba(59, 130, 246, 0.35), transparent 65%),
+        radial-gradient(720px 360px at 85% -80px, rgba(14, 165, 233, 0.22), transparent 65%),
+        linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
+    padding: 116px 0 96px 0;
+    overflow: hidden;
+}
+.hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 72px),
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 72px);
+    -webkit-mask-image: radial-gradient(70% 60% at 50% 38%, #000 30%, transparent 100%);
+            mask-image: radial-gradient(70% 60% at 50% 38%, #000 30%, transparent 100%);
+    pointer-events: none;
+}
+.hero .hero-title { color: #ffffff; font-size: 3.3rem; letter-spacing: -0.03em; }
+.hero .hero-slogan { color: var(--blue-400); }
+.hero .hero-description { color: #c3cede; }
+.hero .hero-note { color: #8fa3c4; }
+.hero .hero-note a { color: var(--blue-400); }
+.hero .btn-secondary {
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(6px);
+}
+.hero .btn-secondary:hover { background: rgba(255, 255, 255, 0.14); border-color: rgba(255,255,255,0.6); }
+
+/* Pill buttons with gradient primary */
+.btn { border-radius: 999px; transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease; }
+.btn-primary {
+    background: linear-gradient(135deg, #2f6bff 0%, #1d4ed8 100%);
+    box-shadow: 0 10px 24px -8px rgba(37, 99, 235, 0.55);
+}
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 14px 30px -8px rgba(37, 99, 235, 0.6); }
+.btn:active { transform: translateY(0); }
+
+/* Sticky glass header gains a shadow once scrolled */
+.navbar { transition: box-shadow 0.25s ease; }
+.navbar.scrolled { box-shadow: 0 10px 30px -12px rgba(2, 6, 23, 0.25); }
+.nav-cta-btn { border-radius: 999px; }
+
+/* Cards: softer radius, lift on hover */
+.card, .pricing-card, .offer-card, .faq-item { border-radius: var(--radius); }
+.process-card, .feature-card { transition: transform 0.2s ease, box-shadow 0.25s ease; }
+.process-card:hover, .feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.pricing-card { box-shadow: var(--shadow-md); }
+.pricing-card.featured {
+    border: 2px solid transparent;
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(135deg, #2f6bff, #0ea5e9) border-box;
+    box-shadow: var(--shadow-lg);
+}
+.popular-badge, .locked-badge { border-radius: 999px; letter-spacing: 0.02em; }
+
+/* Offer card on the local-data section */
+.offer-card { box-shadow: var(--shadow-lg); }
+.guarantee-box { border-radius: 12px; }
+
+/* FAQ polish */
+.faq-item { transition: box-shadow 0.2s ease; }
+.faq-item[open] { box-shadow: var(--shadow-md); }
+.faq-item summary { cursor: pointer; }
+
+/* Dark footer */
+.footer { background: var(--navy-900); color: #aebdd6; }
+.footer h3, .footer h4, .footer .footer-brand, .footer a { color: #e6edf9; }
+.footer p, .footer li, .footer .footer-bottom { color: #93a5c4; }
+.footer a:hover { color: #ffffff; }
+
+/* Scroll reveal (JS adds .reveal targets; no-JS keeps everything visible) */
+.js-reveal .reveal { opacity: 0; transform: translateY(16px); }
+.js-reveal .reveal.in {
+    opacity: 1; transform: none;
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+    .js-reveal .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+}
+@media (max-width: 640px) {
+    .hero { padding: 84px 0 68px 0; }
+    .hero .hero-title { font-size: 2.3rem; }
+}

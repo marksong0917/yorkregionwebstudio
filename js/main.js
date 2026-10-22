@@ -111,3 +111,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+    // ---- 2026 revamp: scrolled header + scroll reveal ----
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 8);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    }
+    const revealTargets = document.querySelectorAll(
+        '.section-header, .process-card, .feature-card, .pricing-card, .offer-card, .faq-item');
+    if ('IntersectionObserver' in window && revealTargets.length) {
+        document.documentElement.classList.add('js-reveal');
+        revealTargets.forEach((el) => el.classList.add('reveal'));
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+            });
+        }, { threshold: 0.12 });
+        revealTargets.forEach((el) => io.observe(el));
+    }
