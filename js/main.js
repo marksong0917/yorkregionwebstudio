@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (response.ok && data.success) {
                     if (result) {
                         result.style.color = "#047857";
-                        result.innerHTML = "&#10004; Thank you! Your message has been sent directly to me. I'll reply personally — usually the same business day.";
+                        result.innerHTML = "&#10004; Thank you! Your message has been sent. We'll reply — usually the same business day.";
                     }
                     form.reset();
                 } else {
