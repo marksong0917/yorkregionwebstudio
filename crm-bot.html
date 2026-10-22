@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM + Bot | One Web App for Leads, Projects &amp; Invoicing | York Region Web Studio</title>
+    <meta name="description" content="CRM + Bot — one clean web application for trades: track leads, convert them to projects, follow production, and keep AR/AP invoicing tidy. Your database stays on a server in your own office.">
+    <meta name="author" content="York Region Web Studio">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://yorkregionwebstudio.com/crm-bot.html">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CRM + Bot | York Region Web Studio">
+    <meta property="og:description" content="One web app for your whole office: leads, projects, production, invoicing — with a bot that does the lookup and drafting. Your data stays in your office.">
+    <meta property="og:url" content="https://yorkregionwebstudio.com/crm-bot.html">
+    <meta property="og:image" content="https://yorkregionwebstudio.com/images/newood-preview.jpg">
+    <meta property="og:locale" content="en_CA">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://yorkregionwebstudio.com/images/newood-preview.jpg">
+    <meta name="twitter:title" content="CRM + Bot | York Region Web Studio">
+    <meta name="twitter:description" content="Leads in, projects out, money tracked — one clean web application with a built-in assistant.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "CRM + Bot — CRM Web Application with Built-In Assistant for Trades",
+      "provider": { "@type": "ProfessionalService", "name": "York Region Web Studio", "telephone": "289-500-5666", "url": "https://yorkregionwebstudio.com/" },
+      "areaServed": ["York Region", "Greater Toronto Area"],
+      "description": "A lightweight CRM web application with a built-in assistant: lead tracking, lead-to-project conversion, project and production tracking, AR/AP invoicing, role-based login portal for team and customers, running on a local server in the client's office with secure online access.",
+      "url": "https://yorkregionwebstudio.com/crm-bot.html"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where does my data live with CRM + Bot?",
+          "acceptedAnswer": { "@type": "Answer", "text": "On a small server in your own office that we set up. The web application is reached online through a secure, encrypted connection with no open ports. Your team can keep working on your office network even if the internet drops, and you can export everything at any time." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does CRM + Bot cost?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Plans are priced by role, from Receptionist at $99/mo to Office Manager at $999/mo, plus a one-time setup priced as a range for your business. Your exact price is quoted in writing after a free 15-min call." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to set up?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Most shops are live on the first tiers in 1 to 2 weeks once we have your current spreadsheet or data. Higher tiers are phased in, with your timeline confirmed in writing before we start." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I own my data and the system?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — the server and the data are yours, in your office. Export everything at any time. If you ever cancel, the monthly plan ends with 30 days' notice and your data stays with you." }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="navbar" role="banner">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo" aria-label="York Region Web Studio Home">
+                <span class="logo-icon" aria-hidden="true">&#9889;</span> York Region <span>Web Studio</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Main navigation">
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="trade-estimator.html" class="nav-link">Trade Estimator</a>
+                <a href="crm-bot.html" class="nav-link" aria-current="page">CRM + Bot</a>
+                <a href="index.html#pricing" class="nav-link">Pricing</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="tel:2895005666" class="nav-cta-btn">Call (289) 500-5666</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 id="hero-title" class="hero-title">Leads in. Projects out. Money tracked.</h1>
+                    <p class="hero-slogan">CRM + Bot — one web application for your whole office.</p>
+                    <p class="hero-description">
+                        Track every lead, turn it into a project in one click, follow it through production, and keep invoicing tidy — AR and AP in one place. A built-in bot does the lookups and the drafting. Your team just keeps one website open.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">Book a Free 15-Min Call</a>
+                        <a href="#tiers" class="btn btn-secondary">See Plans &amp; Pricing</a>
+                    </div>
+                    <p class="hero-note">Built for trades &amp; cabinetry shops &middot; Your database stays in your office &middot; Plans from $99/mo</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problems -->
+        <section class="section" aria-labelledby="problems-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="problems-title">The Problems It Fixes</h2>
+                    <p>If this sounds familiar, your spreadsheet has outgrown the business.</p>
+                </div>
+                <div class="grid grid-3 process-grid">
+                    <div class="card process-card">
+                        <h3>Leads Get Lost</h3>
+                        <p>Enquiries sit in texts, emails, and sticky notes. Nobody knows who followed up — or who didn't.</p>
+                    </div>
+                    <div class="card process-card">
+                        <h3>Projects Are a Mess</h3>
+                        <p>Which jobs are in production? What's waiting on materials? When is install day? It's in three places, or in one person's head.</p>
+                    </div>
+                    <div class="card process-card">
+                        <h3>AR / AP Is Messy</h3>
+                        <p>Deposits, progress invoices, balances due, supplier bills and receipts — scattered. Chasing money takes longer than earning it.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pipeline -->
+        <section class="section bg-light" aria-labelledby="pipeline-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="pipeline-title">One Flow, Start to Finish</h2>
+                    <p>Every job moves down the same clean line. You always see what is stuck, and where.</p>
+                </div>
+                <div class="grid grid-3 process-grid">
+                    <div class="card process-card">
+                        <div class="process-step-num">1</div>
+                        <h3>Leads Board</h3>
+                        <p>New Lead &rarr; Contacted &rarr; Quoted &rarr; Won or Lost. Every enquiry lands here, with follow-up reminders so none go cold.</p>
+                    </div>
+                    <div class="card process-card">
+                        <div class="process-step-num">2</div>
+                        <h3>One-Click Project</h3>
+                        <p>Win the job and the lead becomes a project — customer, quote, and details carry over. Nothing is typed twice.</p>
+                    </div>
+                    <div class="card process-card">
+                        <div class="process-step-num">3</div>
+                        <h3>Production Board</h3>
+                        <p>Design &rarr; Materials Ordered &rarr; In Production &rarr; Install &rarr; Invoiced &rarr; Paid. Money in and money out tracked on every project.</p>
+                    </div>
+                </div>
+                <div class="section-header" style="margin-top: 40px;">
+                    <p><strong>Every project gets one page:</strong> status, balance, schedule, files, drawings, photos, and notes — everything about the job in one place.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portal roles -->
+        <section class="section" aria-labelledby="portal-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="portal-title">One Login. The Right View for Each Person.</h2>
+                    <p>Everyone signs in to the same portal — and sees only what their role should see.</p>
+                </div>
+                <div class="grid grid-4">
+                    <article class="card feature-card">
+                        <div class="card-icon-wrapper" aria-hidden="true">&#128081;</div>
+                        <h3>Owner / Management</h3>
+                        <p>Everything — money, margins, approvals, reports. Sensitive numbers live here only.</p>
+                    </article>
+                    <article class="card feature-card">
+                        <div class="card-icon-wrapper" aria-hidden="true">&#128188;</div>
+                        <h3>Office / Staff</h3>
+                        <p>Leads, projects, scheduling, files, and day-to-day admin. No pay, cost, or margin data.</p>
+                    </article>
+                    <article class="card feature-card">
+                        <div class="card-icon-wrapper" aria-hidden="true">&#128296;</div>
+                        <h3>Shop / Production</h3>
+                        <p>Today's production list and job details on the shop screen. Nothing financial.</p>
+                    </article>
+                    <article class="card feature-card">
+                        <div class="card-icon-wrapper" aria-hidden="true">&#128100;</div>
+                        <h3>Customers</h3>
+                        <p>A limited view of their own job only — progress, shared files, invoices, and messages. Nothing internal, ever.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bot + safety -->
+        <section class="section bg-light" aria-labelledby="bot-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="bot-title">The Bot Does the Busywork — Safely</h2>
+                    <p>Ask in plain words, right inside the portal. The rules are simple, and they are enforced by the system, not by trust.</p>
+                </div>
+                <div class="grid grid-3 process-grid">
+                    <div class="card process-card">
+                        <h3>Ask = Instant</h3>
+                        <p>"What's the balance on the Smith kitchen?" "Find the invoice." Lookups and files come back in seconds.</p>
+                    </div>
+                    <div class="card process-card">
+                        <h3>Create = Draft + Approve</h3>
+                        <p>Invoices, orders, and quotes are prepared as drafts. Nothing is sent or committed until the owner approves it.</p>
+                    </div>
+                    <div class="card process-card">
+                        <h3>Sensitive = Management Only</h3>
+                        <p>Pay, costs, and margins are never shown to staff screens, shop screens, or customers — and every action is logged.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Local-first -->
+        <section class="section" aria-labelledby="local-title">
+            <div class="container">
+                <div class="offer-card">
+                    <span class="showcase-tag">Your Data, In Your Hands</span>
+                    <h2 id="local-title">The Database Lives in Your Office. Not in a Cloud CRM.</h2>
+                    <p>CRM + Bot runs on a small server we set up in your office. The web application is reached online through a secure, encrypted connection — with no open ports. Your data never sits on some big platform, and there are no per-seat cloud fees.</p>
+                    <div class="guarantee-box">
+                        <h3>What That Means for You</h3>
+                        <p>&#10003; Your team keeps working on your office network, even if the internet drops.<br>
+                        &#10003; Automatic backups every night, with restore checks.<br>
+                        &#10003; You own the server and the data — export everything, any time.<br>
+                        &#10003; Login + role permissions on every screen, and a full activity log.</p>
+                    </div>
+                    <p>Running live today at a Concord cabinetry shop — ask on the call and we will walk you through the real thing.</p>
+                    <p><a href="#contact" class="btn btn-primary">Book a Free 15-Min Call</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tiers -->
+        <section id="tiers" class="section bg-light" aria-labelledby="tiers-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="tiers-title">Plans Priced by Role</h2>
+                    <p>Start where your pain is. Every plan includes everything below it — and costs a fraction of hiring that role.</p>
+                </div>
+                <div class="grid grid-3 pricing-grid">
+                    <article class="pricing-card">
+                        <h3>Receptionist</h3>
+                        <div class="price">$99 <span>CAD/mo</span></div>
+                        <div class="price-sub">Setup $500–$1,000. Never miss an enquiry again.</div>
+                        <ul class="price-features">
+                            <li>&#10003; Answers basic info &amp; FAQs</li>
+                            <li>&#10003; Hours, address, services, price ranges</li>
+                            <li>&#10003; Captures leads &amp; takes messages</li>
+                            <li>&#10003; Public info only — no internal data</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary btn-block package-cta" data-package="CRM + Bot — Receptionist ($99/mo)">Choose Receptionist</a>
+                    </article>
+
+                    <article class="pricing-card">
+                        <h3>Clerk</h3>
+                        <div class="price">$199 <span>CAD/mo</span></div>
+                        <div class="price-sub">Setup $1,000–$2,000. Every answer in seconds.</div>
+                        <ul class="price-features">
+                            <li>&#10003; Everything in Receptionist</li>
+                            <li>&#10003; Lead &amp; project boards</li>
+                            <li>&#10003; Search customers, jobs, invoices</li>
+                            <li>&#10003; Status, balances &amp; file retrieval</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary btn-block package-cta" data-package="CRM + Bot — Clerk ($199/mo)">Choose Clerk</a>
+                    </article>
+
+                    <article class="pricing-card featured">
+                        <span class="popular-badge">Most Shops Start Here</span>
+                        <h3>Coordinator</h3>
+                        <div class="price">$349 <span>CAD/mo</span></div>
+                        <div class="price-sub">Setup $2,000–$3,500. Nothing falls through.</div>
+                        <ul class="price-features">
+                            <li>&#10003; Everything in Clerk</li>
+                            <li>&#10003; Calendars &amp; booking</li>
+                            <li>&#10003; Follow-up &amp; deadline reminders</li>
+                            <li>&#10003; Daily briefing in the portal</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary btn-block package-cta" data-package="CRM + Bot — Coordinator ($349/mo)">Choose Coordinator</a>
+                    </article>
+
+                    <article class="pricing-card">
+                        <h3>Administrator</h3>
+                        <div class="price">$599 <span>CAD/mo</span></div>
+                        <div class="price-sub">Setup $3,500–$6,000. AR / AP handled with approval.</div>
+                        <ul class="price-features">
+                            <li>&#10003; Everything in Coordinator</li>
+                            <li>&#10003; Invoices, orders &amp; quotes — draft + approve</li>
+                            <li>&#10003; Receipt &amp; document filing</li>
+                            <li>&#10003; Work-hour entry &amp; tallies</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary btn-block package-cta" data-package="CRM + Bot — Administrator ($599/mo)">Choose Administrator</a>
+                    </article>
+
+                    <article class="pricing-card">
+                        <h3>Office Manager</h3>
+                        <div class="price">$999 <span>CAD/mo</span></div>
+                        <div class="price-sub">Setup $6,000–$10,000, custom. The office, run.</div>
+                        <ul class="price-features">
+                            <li>&#10003; Everything in Administrator</li>
+                            <li>&#10003; Payroll prep &amp; AR follow-up lists</li>
+                            <li>&#10003; Weekly &amp; monthly owner reports</li>
+                            <li>&#10003; Proactive flags — overdue &amp; unpaid</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary btn-block package-cta" data-package="CRM + Bot — Office Manager ($999/mo)">Choose Office Manager</a>
+                    </article>
+
+                    <article class="pricing-card locked">
+                        <span class="locked-badge">Start Small</span>
+                        <h3>Not Sure Where You Fit?</h3>
+                        <div class="price">Pilot</div>
+                        <div class="price-sub">30 days on Clerk with your real data imported.</div>
+                        <ul class="price-features">
+                            <li>&#10003; Your spreadsheet moved in for you</li>
+                            <li>&#10003; Your old sheet stays untouched as backup</li>
+                            <li>&#10003; Upgrade the same system any time</li>
+                            <li>&#10003; Cancel and nothing is lost</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline btn-block package-cta" data-package="CRM + Bot — 30-Day Clerk Pilot">Ask About the Pilot</a>
+                    </article>
+                </div>
+                <p class="pricing-note">Setup is a custom range for your business — your exact price is quoted in writing after the call, before any work starts.</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section" aria-labelledby="faq-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="faq-title">Questions, Answered Straight</h2>
+                    <p>Quick answers, no fine print.</p>
+                </div>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Where does my data live?</summary>
+                        <p>On a small server in your own office that we set up. The web application is reached online through a secure, encrypted connection with no open ports. Your team can keep working on your office network even if the internet drops, and you can export everything at any time.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How much does it cost in total?</summary>
+                        <p>Plans are priced by role, from Receptionist at $99/mo to Office Manager at $999/mo, plus a one-time setup priced as a range for your business. Your exact price is quoted in writing after a free 15-min call.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How long does it take to set up?</summary>
+                        <p>Most shops are live on the first tiers in 1 to 2 weeks once we have your current spreadsheet or data. Higher tiers are phased in, with your timeline confirmed in writing before we start.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Do I own my data and the system?</summary>
+                        <p>Yes — the server and the data are yours, in your office. Export everything at any time. If you ever cancel, the monthly plan ends with 30 days' notice and your data stays with you.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h2 id="contact-title">Fix the spreadsheet chaos.</h2>
+                        <p>One call, and we map your leads, projects, and invoicing into one clean system.</p>
+                        <p class="response-promise">Replies usually land the same business day.</p>
+                        <div class="contact-actions">
+                            <a href="tel:2895005666" class="btn btn-primary">Call (289) 500-5666</a>
+                            <a href="sms:2895005666" class="btn btn-secondary">Text Us</a>
+                        </div>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="icon" aria-hidden="true">&#128222;</span>
+                                <div>
+                                    <strong>Phone</strong>
+                                    <a href="tel:2895005666">(289) 500-5666</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="icon" aria-hidden="true">&#9993;</span>
+                                <div>
+                                    <strong>Email</strong>
+                                    <a href="mailto:marksong0000@gmail.com">marksong0000@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="icon" aria-hidden="true">&#128205;</span>
+                                <div>
+                                    <strong>Service Area</strong>
+                                    <span>Serving the GTA and surrounding areas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-card">
+                        <h3>Ask About CRM + Bot</h3>
+                        <p class="form-intro">Tell us about your shop and where the chaos is. Replies usually land the same business day.</p>
+                        <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                            <input type="hidden" name="access_key" value="3f63b007-996e-4bd0-b3d5-812fcb5ec5db">
+                            <input type="hidden" name="subject" value="New Lead - CRM + Bot - York Region Web Studio">
+                            <input type="hidden" name="from_name" value="York Region Web Studio Site">
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Smith" autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com" autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(289) 000-0000" autocomplete="tel">
+                            </div>
+                            <div class="form-group">
+                                <label for="business">Business Name (optional)</label>
+                                <input type="text" id="business" name="business" placeholder="Your business name" autocomplete="organization">
+                            </div>
+                            <div class="form-group">
+                                <label for="website">Current Website (optional)</label>
+                                <input type="url" id="website" name="website" placeholder="https://yourcurrentsite.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="package">What Are You Interested In?</label>
+                                <select id="package" name="package" class="form-select">
+                                    <option value="CRM + Bot — 30-Day Clerk Pilot" selected>CRM + Bot — 30-Day Clerk Pilot</option>
+                                    <option value="CRM + Bot — Receptionist ($99/mo)">Receptionist ($99/mo)</option>
+                                    <option value="CRM + Bot — Clerk ($199/mo)">Clerk ($199/mo)</option>
+                                    <option value="CRM + Bot — Coordinator ($349/mo)">Coordinator ($349/mo)</option>
+                                    <option value="CRM + Bot — Administrator ($599/mo)">Administrator ($599/mo)</option>
+                                    <option value="CRM + Bot — Office Manager ($999/mo)">Office Manager ($999/mo)</option>
+                                    <option value="I'm not sure yet – need a recommendation">I'm not sure yet – need a recommendation</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Biggest Headache (optional)</label>
+                                <textarea id="message" name="message" rows="3" placeholder="e.g. Leads in texts, invoicing is a mess..."></textarea>
+                            </div>
+                            <button type="submit" id="submitBtn" class="btn btn-primary btn-block">Send Message</button>
+                            <p class="form-next">What happens next: we reply, we have the free 15-min call, and you get your exact price in writing.</p>
+                            <p class="form-privacy">Your details are only used to reply to you — never shared or added to a mailing list.</p>
+                            <div id="formResult" class="form-result" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="brand-logo"><span class="logo-icon" aria-hidden="true">&#9889;</span> York Region <span>Web Studio</span></span>
+                    <p class="slogan-sm">Your one-stop website solution.</p>
+                    <p class="service-cities">Serving the GTA and surrounding areas</p>
+                </div>
+                <nav class="footer-links" aria-label="Footer Navigation">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="trade-estimator.html">Trade Estimator</a>
+                    <a href="crm-bot.html">CRM + Bot</a>
+                    <a href="index.html#pricing">Pricing</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact">Contact</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms &amp; Conditions</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 York Region Web Studio. All rights reserved.</p>
+                <div class="footer-social">
+                    <a class="social-icon" href="https://www.instagram.com/marksong0917/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+                    </a>
+                    <div class="made-in-canada">
+                        <span class="flag" aria-hidden="true">&#127464;&#127462;</span> Made in Canada
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.min.js"></script>
+</body>
+</html>
