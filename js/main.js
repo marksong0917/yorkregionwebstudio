@@ -6,11 +6,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
 
+    function closeNav(returnFocus) {
+        if (navMenu) navMenu.classList.remove('active');
+        if (navToggle) {
+            navToggle.setAttribute('aria-expanded', 'false');
+            if (returnFocus) navToggle.focus();
+        }
+    }
+
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', () => {
             const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
             navToggle.setAttribute('aria-expanded', String(!isExpanded));
             navMenu.classList.toggle('active');
+        });
+
+        // Escape closes the mobile menu and returns focus to the toggle
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeNav(true);
+            }
         });
     }
 
@@ -18,8 +33,24 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (navMenu && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+                closeNav(false);
+            }
+        });
+    });
+
+    // Pricing buttons pre-select the matching package in the contact form
+    const packageSelect = document.getElementById('package');
+    const packageCtas = document.querySelectorAll('.package-cta');
+    packageCtas.forEach(cta => {
+        cta.addEventListener('click', () => {
+            const wanted = cta.getAttribute('data-package');
+            if (packageSelect && wanted) {
+                for (let i = 0; i < packageSelect.options.length; i++) {
+                    if (packageSelect.options[i].value === wanted) {
+                        packageSelect.selectedIndex = i;
+                        break;
+                    }
+                }
             }
         });
     });
@@ -41,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (result) {
                 result.style.display = 'block';
-                result.style.color = '#cbd5e1';
+                result.style.color = '#334155';
                 result.textContent = "Submitting your message...";
             }
 
@@ -56,19 +87,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (response.ok && data.success) {
                     if (result) {
-                        result.style.color = "#10b981";
-                        result.innerHTML = "&#10004; Thank you! Your message has been sent directly to Mark.";
+                        result.style.color = "#047857";
+                        result.innerHTML = "&#10004; Thank you! Your message has been sent directly to me. I'll reply personally — usually the same business day.";
                     }
                     form.reset();
                 } else {
                     if (result) {
-                        result.style.color = "#ef4444";
+                        result.style.color = "#b91c1c";
                         result.textContent = data.message || "Error submitting form. Please try again.";
                     }
                 }
             } catch (error) {
                 if (result) {
-                    result.style.color = "#ef4444";
+                    result.style.color = "#b91c1c";
                     result.textContent = "Connection error. Please call directly at (289) 500-5666.";
                 }
             } finally {

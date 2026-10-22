@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>York Region Web Studio | Custom Web Design for Small Businesses</title>
+    <title>York Region Web Studio | Small Business Web Design</title>
     <meta name="description" content="One-stop website solution for small businesses in York Region. Design, hosting, security, and updates handled by a local developer.">
     <meta name="author" content="York Region Web Studio">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
     <link rel="canonical" href="https://yorkregionwebstudio.com/">
+    <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="logo.svg">
-    
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="York Region Web Studio | Custom Web Design for Small Businesses">
+    <meta property="og:title" content="York Region Web Studio | Small Business Web Design">
     <meta property="og:description" content="One-stop website solution for local small businesses. Hand it to us — we handle everything.">
     <meta property="og:url" content="https://yorkregionwebstudio.com/">
     <meta property="og:image" content="https://yorkregionwebstudio.com/images/newood-preview.jpg">
     <meta property="og:locale" content="en_CA">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://yorkregionwebstudio.com/images/newood-preview.jpg">
@@ -35,9 +38,14 @@
       "email": "marksong0000@gmail.com",
       "address": {
         "@type": "PostalAddress",
+        "addressLocality": "Aurora",
         "addressRegion": "ON",
-        "addressCountry": "CA",
-        "addressLocality": "York Region"
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.9996,
+        "longitude": -79.4503
       },
       "areaServed": [
         "Aurora",
@@ -45,16 +53,73 @@
         "Richmond Hill",
         "Vaughan",
         "Markham",
-        "Whitchurch-Stouffville",
-        "King",
-        "Georgina"
+        "York Region"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/marksong0917/"
       ],
       "url": "https://yorkregionwebstudio.com/",
       "priceRange": "$299 - $799 CAD",
-      "description": "One-stop website solution for small business owners in York Region — design, hosting, and support from a local developer."
+      "description": "One-stop website solution for small business owners in York Region — design, hosting, and support from a local developer.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Website Packages",
+        "itemListElement": [
+          { "@type": "Offer", "name": "Starter Package", "price": "299", "priceCurrency": "CAD" },
+          { "@type": "Offer", "name": "Business Package", "price": "499", "priceCurrency": "CAD" },
+          { "@type": "Offer", "name": "Growth Package", "price": "799", "priceCurrency": "CAD" },
+          { "@type": "Offer", "name": "Custom Apps & E-Commerce", "priceCurrency": "CAD" }
+        ]
+      }
     }
     </script>
-    
+
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a website cost in total?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Starter is $419 in the first year ($299 build plus $10/mo hosting and care), Business is $967 ($499 plus $39/mo), and Growth is $1,627 ($799 plus $69/mo). Prices are in CAD, HST extra where applicable. With the founding offer — 20% off the build fee for my first 5 clients — the first-year totals are $359.20, $867.20, and $1,467.20." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I own my website and domain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Your domain is yours, and your site content and branding are yours. If you ever decide to leave, I provide your site files so you can move to self-hosting — the monthly plan can be cancelled with 30 days' written notice." }
+        },
+        {
+          "@type": "Question",
+          "name": "What do you need from me to start?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Whatever you already have: your logo, photos, and rough notes about your services. If you have no text ready, I can build the first draft from your Facebook page, your existing website, or your public listings, and you approve everything before it goes live." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it really take?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Most sites go live within 72 hours once I have your content and you have approved the design — that is when the 48-hour build and 72-hour go-live clock starts. Larger or custom projects take longer, and I will quote the timeline in writing before we start." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my website rank first on Google?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No one can honestly guarantee a ranking, and I do not promise one. I build every site with the basics Google needs — clear page titles and descriptions, mobile-friendly pages, fast loading, and a sitemap — and a free Google Business Profile is the biggest single help for local searches." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do payments work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Your payment schedule is confirmed in writing before any work starts. You do not pay the final balance until you have approved the design." }
+        }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body>
@@ -75,9 +140,10 @@
             </button>
             <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Main navigation">
                 <a href="#process" class="nav-link">How It Works</a>
-                <a href="#services" class="nav-link">Services</a>
                 <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#about" class="nav-link">About</a>
                 <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#faq" class="nav-link">FAQ</a>
                 <a href="#contact" class="nav-link">Contact</a>
                 <a href="tel:2895005666" class="nav-cta-btn">Call (289) 500-5666</a>
             </nav>
@@ -92,12 +158,13 @@
                     <h1 id="hero-title" class="hero-title">Your One-Stop Website Solution.</h1>
                     <p class="hero-slogan">Hand it to us — we handle everything.</p>
                     <p class="hero-description">
-                        Design, hosting, security, and updates — one local developer takes care of it all. Premium service, fast turnaround, zero headaches.
+                        I'm Mark Song, a local developer in Aurora. I design, build, host, and look after your website — premium service, fast turnaround, and you deal with me directly the whole way.
                     </p>
                     <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
-                        <a href="#portfolio" class="btn btn-secondary">See Recent Work</a>
+                        <a href="#contact" class="btn btn-primary">Book a Free 15-Min Call</a>
+                        <a href="tel:2895005666" class="btn btn-secondary">Call (289) 500-5666</a>
                     </div>
+                    <p class="hero-note">From $299 CAD &middot; Live in 72 hours &middot; <a href="#offer">Founding offer: 20% off your build — first 5 clients</a></p>
                 </div>
             </div>
         </section>
@@ -107,23 +174,23 @@
             <div class="container">
                 <div class="section-header">
                     <h2 id="process-title">Simple 3-Step Process</h2>
-                    <p>How we get your business online without wasting your time.</p>
+                    <p>How I get your business online without wasting your time.</p>
                 </div>
                 <div class="grid grid-3 process-grid">
                     <div class="card process-card">
                         <div class="process-step-num">1</div>
                         <h3>15-Min Call</h3>
-                        <p>Tell us about your business, service area, and goals. We handle the rest.</p>
+                        <p>Tell me about your business, your service area, and your goals. <a href="#contact">Book a free call</a> or send the form below and I'll call you back.</p>
                     </div>
                     <div class="card process-card">
                         <div class="process-step-num">2</div>
                         <h3>48-Hour Build</h3>
-                        <p>We design and construct your custom website directly with zero delay.</p>
+                        <p>Once I have what I need from you, I design and build your site and send it to you for approval. No text ready? I can build the first draft from your Facebook page or existing site.</p>
                     </div>
                     <div class="card process-card">
                         <div class="process-step-num">3</div>
                         <h3>72-Hour Go Live</h3>
-                        <p>Your site launches online and begins receiving customer calls directly.</p>
+                        <p>You approve the design, I put the site live — ready to take enquiries by phone, text, and contact form.</p>
                     </div>
                 </div>
             </div>
@@ -134,23 +201,23 @@
             <div class="container">
                 <div class="section-header">
                     <h2 id="services-title">One Less Thing to Worry About</h2>
-                    <p>Your entire website — handled.</p>
+                    <p>Your entire website — handled by me.</p>
                 </div>
                 <div class="grid grid-3">
                     <article class="card feature-card">
                         <div class="card-icon-wrapper" aria-hidden="true">&#128100;</div>
                         <h3>Direct Access</h3>
-                        <p>Deal directly with your developer. Fast response times, clear answers, and zero agency middlemen.</p>
+                        <p>You deal directly with me — your developer. Clear answers, no agency middlemen, and I reply personally, usually the same business day.</p>
                     </article>
                     <article class="card feature-card">
                         <div class="card-icon-wrapper" aria-hidden="true">&#9881;</div>
                         <h3>Turnkey Management</h3>
-                        <p>Hosting, security, and updates fully handled for you. You run your business — we run your website.</p>
+                        <p>Hosting, security, backups, and updates handled for you. You run your business — I run your website.</p>
                     </article>
                     <article class="card feature-card">
                         <div class="card-icon-wrapper" aria-hidden="true">&#9889;</div>
-                        <h3>Built for Conversion</h3>
-                        <p>Fast layouts designed specifically to get local customers to call or message you directly.</p>
+                        <h3>Built to Be Contacted</h3>
+                        <p>Fast, mobile-friendly layouts with click-to-call and clear contact options, so local customers can reach you in one tap.</p>
                     </article>
                 </div>
             </div>
@@ -161,14 +228,19 @@
             <div class="container">
                 <div class="section-header">
                     <h2 id="portfolio-title">Featured Work</h2>
-                    <p>Real custom web design for local business leaders.</p>
+                    <p>Real websites I built and still look after for local businesses.</p>
                 </div>
                 <div class="showcase-card">
                     <div class="showcase-info">
-                        <span class="showcase-tag">Featured Client</span>
+                        <span class="showcase-tag">Featured Project — Newood Millwork Inc., Concord</span>
                         <h3>Newood Millwork Inc.</h3>
                         <p class="showcase-url">newoodmillwork.com</p>
-                        <p>High-performance visual layout highlighting architectural millwork, custom cabinetry, and commercial woodworking projects.</p>
+                        <ul class="case-facts">
+                            <li>Business website for a custom cabinetry and millwork company</li>
+                            <li>Project galleries for kitchens, closets, and commercial work</li>
+                            <li>A free online kitchen cost estimator I built as a custom web app, giving visitors an instant estimate</li>
+                            <li>Hosting, security, and updates handled by me, ongoing</li>
+                        </ul>
                         <a href="https://newoodmillwork.com" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" aria-label="Visit Newood Millwork live website in new tab">Visit Live Website &rarr;</a>
                     </div>
                     <div class="showcase-preview">
@@ -180,7 +252,10 @@
                                 <span class="browser-address">https://newoodmillwork.com</span>
                             </div>
                             <div class="browser-content-img">
-                                <img src="images/newood-preview.jpg" alt="Newood Millwork website homepage, designed and built by York Region Web Studio" loading="lazy" decoding="async">
+                                <picture>
+                                    <source srcset="images/newood-preview.webp" type="image/webp">
+                                    <img src="images/newood-preview.jpg" width="1200" height="624" alt="Newood Millwork website homepage, designed and built by York Region Web Studio" loading="lazy" decoding="async">
+                                </picture>
                                 <div class="img-overlay">
                                     <h4>NEWOOD MILLWORK INC.</h4>
                                     <p>Architectural Millwork &amp; Custom Cabinetry</p>
@@ -196,8 +271,65 @@
                     <p class="testimonial-text">"After struggling for over three years with other companies, Mark got our new site launched in just under a week. His patience, consistency, and professionalism turned a long-delayed project into a completed result. I highly recommend him to any business owner."</p>
                     <div class="testimonial-author">
                         <strong>Jason Song</strong>
-                        <span>President, Newood Millwork Inc.</span>
+                        <span>President, Newood Millwork Inc. — featured project above, Concord</span>
                     </div>
+                </div>
+
+                <!-- Second portfolio entry -->
+                <div class="showcase-card showcase-simple">
+                    <div class="showcase-info">
+                        <span class="showcase-tag">Also Built by Me</span>
+                        <h3>Havenwest Closets &amp; Storage Solutions</h3>
+                        <p class="showcase-url">havenwestclosets.com</p>
+                        <p>Brand identity and website for a custom closets and storage company — clean galleries for walk-in closets, reach-ins, and mudrooms, built to book consultations.</p>
+                        <a href="https://havenwestclosets.com" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" aria-label="Visit Havenwest Closets live website in new tab">Visit Live Website &rarr;</a>
+                    </div>
+                    <div class="showcase-info">
+                        <span class="showcase-tag">What I Built</span>
+                        <ul class="case-facts">
+                            <li>Brand identity and logo direction</li>
+                            <li>Custom website with per-room-type gallery pages</li>
+                            <li>Consultation-focused contact path</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Meet Mark Section -->
+        <section id="about" class="section bg-light" aria-labelledby="about-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="about-title">Meet Mark</h2>
+                    <p>The person you'll actually talk to.</p>
+                </div>
+                <div class="about-grid">
+                    <div>
+                        <p>I'm <strong>Mark Song</strong>, a local developer based in Aurora. I hold a Computer Programmer Analyst diploma from Georgian College, and I build websites and custom web tools for small businesses across York Region.</p>
+                        <p>I built and maintain Newood Millwork's website and its online kitchen estimator, and the Havenwest Closets website. This isn't a side gig run through a call centre — when you call, text, or email, you get me.</p>
+                    </div>
+                    <div>
+                        <p>That's the whole model: one developer who knows your site, answers directly, and keeps it running after launch. No account managers, no ticket queues, no being passed around.</p>
+                        <p><a href="#contact" class="btn btn-primary">Book a Free 15-Min Call</a></p>
+                        <p class="about-contact">Or reach me directly: <a href="tel:2895005666">(289) 500-5666</a> &middot; <a href="sms:2895005666">Text me</a> &middot; <a href="mailto:marksong0000@gmail.com">marksong0000@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founding Offer & Guarantee Section -->
+        <section id="offer" class="section" aria-labelledby="offer-title">
+            <div class="container">
+                <div class="offer-card">
+                    <span class="showcase-tag">Limited — First 5 Clients</span>
+                    <h2 id="offer-title">Founding Client Offer — 20% Off Your Build</h2>
+                    <p>I'm taking on my first 5 York Region clients at 20% off the build price (monthly hosting &amp; care stays the same). When they're gone, they're gone.</p>
+                    <div class="guarantee-box">
+                        <h3>My Guarantee</h3>
+                        <p>You approve the design before the site goes live — I revise it until you're happy with how it looks. You don't pay the final balance until you approve it. And every site includes a 30-day post-launch warranty: if something displays wrong or a form breaks, I fix it free.</p>
+                        <p><a href="terms.html#warranty">Read the warranty terms &rarr;</a></p>
+                    </div>
+                    <p><a href="#pricing" class="btn btn-primary">See Founding Prices</a></p>
                 </div>
             </div>
         </section>
@@ -207,66 +339,64 @@
             <div class="container">
                 <div class="section-header">
                     <h2 id="pricing-title">Simple Pricing</h2>
-                    <p>No hidden setup fees or surprise bills.</p>
+                    <p>No hidden setup fees or surprise bills. First-year totals are printed on every package — no math required.</p>
                 </div>
                 <div class="grid grid-4 pricing-grid">
-                    
-                    <!-- Level 1 -->
+
+                    <!-- Starter -->
                     <article class="pricing-card">
-                        <span class="level-tag">Level 1</span>
                         <h3>Starter Package</h3>
-                        <div class="price">$299 <span>CAD</span></div>
-                        <div class="price-sub">+$10/mo hosting &amp; maintenance</div>
+                        <div class="price"><s class="price-old">$299</s> $239.20 <span>CAD</span></div>
+                        <div class="price-sub">Founding build price (20% off, first 5 clients). Regular build $299. Then $10/mo hosting &amp; care.<br><strong>First year: $419 total</strong> at regular price — $359.20 with the founding offer.</div>
                         <ul class="price-features">
                             <li>&#10003; 1 Page Custom Web Design</li>
                             <li>&#10003; Fully Mobile-Responsive</li>
                             <li>&#10003; Direct Lead Form</li>
-                            <li>&#10003; High-Speed SSL Hosting Setup</li>
-                            <li>&#10003; Domain &amp; DNS Integration</li>
+                            <li>&#10003; Hosting, SSL &amp; Security Updates</li>
+                            <li>&#10003; Domain &amp; DNS Setup</li>
+                            <li>&#10003; 1 Small Content Edit / Month</li>
                         </ul>
-                        <a href="#contact" class="btn btn-secondary btn-block">Choose Level 1</a>
+                        <a href="#contact" class="btn btn-secondary btn-block package-cta" data-package="Starter Package ($299 CAD + $10/mo hosting &amp; care)">Choose Starter</a>
                     </article>
 
-                    <!-- Level 2 -->
+                    <!-- Business -->
                     <article class="pricing-card featured">
-                        <span class="popular-badge">Most Popular</span>
-                        <span class="level-tag">Level 2</span>
+                        <span class="popular-badge">Best for Most Local Businesses</span>
                         <h3>Business Package</h3>
-                        <div class="price">$499 <span>CAD</span></div>
-                        <div class="price-sub">+$39/mo hosting &amp; maintenance</div>
+                        <div class="price"><s class="price-old">$499</s> $399.20 <span>CAD</span></div>
+                        <div class="price-sub">Founding build price (20% off, first 5 clients). Regular build $499. Then $39/mo hosting &amp; care.<br><strong>First year: $967 total</strong> at regular price — $867.20 with the founding offer.</div>
                         <ul class="price-features">
-                            <li>&#10003; All Level 1 Features Included</li>
+                            <li>&#10003; Everything in Starter</li>
                             <li>&#10003; 2 to 3 Custom Web Pages</li>
-                            <li>&#10003; Fast Local Server Hosting</li>
-                            <li>&#10003; Monthly Security &amp; Backups</li>
-                            <li>&#10003; Email Technical Support</li>
+                            <li>&#10003; Monthly Backups</li>
+                            <li>&#10003; 3 Small Content Edits / Month</li>
+                            <li>&#10003; Email Support — Replies Within 1 Business Day</li>
+                            <li>&#10003; Project Gallery</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary btn-block">Choose Level 2</a>
+                        <a href="#contact" class="btn btn-primary btn-block package-cta" data-package="Business Package ($499 CAD + $39/mo hosting &amp; care)">Choose Business</a>
                     </article>
 
-                    <!-- Level 3 -->
+                    <!-- Growth -->
                     <article class="pricing-card">
-                        <span class="level-tag">Level 3</span>
-                        <h3>Enterprise Package</h3>
-                        <div class="price">$799 <span>CAD</span></div>
-                        <div class="price-sub">+$69/mo priority updates &amp; phone support</div>
+                        <h3>Growth Package</h3>
+                        <div class="price"><s class="price-old">$799</s> $639.20 <span>CAD</span></div>
+                        <div class="price-sub">Founding build price (20% off, first 5 clients). Regular build $799. Then $69/mo hosting &amp; care.<br><strong>First year: $1,627 total</strong> at regular price — $1,467.20 with the founding offer.</div>
                         <ul class="price-features">
-                            <li>&#10003; All Level 2 Features Included</li>
+                            <li>&#10003; Everything in Business</li>
                             <li>&#10003; Up to 6 Custom Web Pages</li>
-                            <li>&#10003; Priority Monthly Edits</li>
+                            <li>&#10003; 5 Priority Content Edits / Month</li>
                             <li>&#10003; Direct Phone Support</li>
                             <li>&#10003; Interactive Project Gallery</li>
                         </ul>
-                        <a href="#contact" class="btn btn-secondary btn-block">Choose Level 3</a>
+                        <a href="#contact" class="btn btn-secondary btn-block package-cta" data-package="Growth Package ($799 CAD + $69/mo hosting &amp; care)">Choose Growth</a>
                     </article>
 
-                    <!-- Level 4 (Locked) -->
+                    <!-- Custom -->
                     <article class="pricing-card locked">
                         <span class="locked-badge">&#128274; Custom Quote</span>
-                        <span class="level-tag">Level 4</span>
                         <h3>Custom Apps &amp; E-Commerce</h3>
                         <div class="price">Inquire</div>
-                        <div class="price-sub">Tailored technical solutions</div>
+                        <div class="price-sub">Priced per project, quoted in writing before work starts.</div>
                         <ul class="price-features">
                             <li>&#10003; Custom Web Applications</li>
                             <li>&#10003; Online Store &amp; Checkout</li>
@@ -274,9 +404,62 @@
                             <li>&#10003; Custom User Portals</li>
                             <li>&#10003; Dedicated Technical Support</li>
                         </ul>
-                        <a href="#contact" class="btn btn-outline btn-block">Inquire for Custom Quote</a>
+                        <a href="#contact" class="btn btn-outline btn-block package-cta" data-package="Custom Apps &amp; E-Commerce (Quote)">Ask for a Custom Quote</a>
                     </article>
 
+                </div>
+                <p class="pricing-note">Prices in CAD, HST extra where applicable. Every package includes hosting, SSL, and security updates — and the <a href="#offer">30-day post-launch warranty</a>.</p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section" aria-labelledby="faq-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="faq-title">Questions, Answered Straight</h2>
+                    <p>The things every business owner asks me before starting.</p>
+                </div>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>How much does it cost in total?</summary>
+                        <p>Starter is $419 in the first year ($299 build + $10/mo), Business is $967 ($499 + $39/mo), and Growth is $1,627 ($799 + $69/mo). Prices are in CAD, HST extra where applicable. With the founding offer (20% off the build fee, first 5 clients), first-year totals drop to $359.20 / $867.20 / $1,467.20. After year one you only pay the monthly hosting &amp; care.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Do I own my website and domain?</summary>
+                        <p>Yes. Your domain is yours, and your site content, text, and branding are yours. If you ever decide to leave, I provide your site files so you can move to self-hosting. The monthly plan can be cancelled with 30 days' written notice — you're never locked in. Full details are in <a href="terms.html">my terms, sections 2 and 3</a>.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What do you need from me to start?</summary>
+                        <p>Whatever you already have: your logo, any photos, and rough notes about your services and service area. If you have no text ready, I can build the first draft from your Facebook page, your existing website, or your public listings — you approve everything before it goes live.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How long does it really take?</summary>
+                        <p>Most sites go live within 72 hours — the 48-hour build and 72-hour go-live clock starts once I have your content and you've approved the design. Bigger or custom projects take longer, and I'll quote that timeline in writing before we start.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Do you write the text and take the photos?</summary>
+                        <p>Photos work best when they're really yours, so I use photos you supply (phone photos are fine). For text, send me rough notes in your own words and I'll shape them into clean page copy for your approval — you won't have to write polished marketing text yourself.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Will I rank first on Google?</summary>
+                        <p>No one can honestly guarantee a ranking, and I don't promise one. I build every site with the basics Google needs: clear titles and descriptions, mobile-friendly fast pages, and a sitemap. A free Google Business Profile is the biggest single help for local searches, and I'll point you to exactly what to set up.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>I already have a website, a domain, or hosting. Can you take over?</summary>
+                        <p>Yes — redesigns and takeovers are common. Keep your domain, and I'll rebuild the site and point everything over with no gap in your online presence.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>You're one person — what if you're unavailable?</summary>
+                        <p>Your site keeps running whether I'm at my desk or not — hosting doesn't depend on me personally. For anything urgent you reach me directly by phone, and because you own your domain and can request your site files at any time, you're never trapped with me.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How do payments work?</summary>
+                        <p>Your payment schedule is confirmed in writing before any work starts — no surprises. And per my guarantee, you don't pay the final balance until you've approved the design.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What does the monthly fee actually cover?</summary>
+                        <p>Hosting, SSL, security updates, and your included content edits — plus backups on Business and Growth. Each package lists exactly what's included, and you can cancel with 30 days' notice.</p>
+                    </details>
                 </div>
             </div>
         </section>
@@ -286,15 +469,26 @@
             <div class="container">
                 <div class="contact-wrapper">
                     <div class="contact-info">
-                        <h2 id="contact-title">Hand your website to us.</h2>
+                        <h2 id="contact-title">Hand your website to me.</h2>
                         <p>One call, and it's off your plate. Clear options, straightforward pricing, everything handled.</p>
-                        
+                        <p class="response-promise">I reply personally — usually the same business day.</p>
+                        <div class="contact-actions">
+                            <a href="tel:2895005666" class="btn btn-primary">Call (289) 500-5666</a>
+                            <a href="sms:2895005666" class="btn btn-secondary">Text Me</a>
+                        </div>
                         <div class="contact-details">
                             <div class="contact-item">
                                 <span class="icon" aria-hidden="true">&#128222;</span>
                                 <div>
                                     <strong>Phone</strong>
                                     <a href="tel:2895005666">(289) 500-5666</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="icon" aria-hidden="true">&#128241;</span>
+                                <div>
+                                    <strong>Text</strong>
+                                    <a href="sms:2895005666">Send me a text message</a>
                                 </div>
                             </div>
                             <div class="contact-item">
@@ -308,14 +502,15 @@
                                 <span class="icon" aria-hidden="true">&#128205;</span>
                                 <div>
                                     <strong>Service Area</strong>
-                                    <span>Aurora, Newmarket, Richmond Hill, Vaughan, Markham, and York Region</span>
+                                    <span>Aurora, Newmarket, Richmond Hill, Vaughan, Markham and across York Region</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="contact-form-card">
                         <h3>Send a Direct Message</h3>
+                        <p class="form-intro">Ask for a free 15-min call back, or tell me about your project. I reply personally — usually the same business day.</p>
                         <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
                             <input type="hidden" name="access_key" value="3f63b007-996e-4bd0-b3d5-812fcb5ec5db">
                             <input type="hidden" name="subject" value="New Lead - York Region Web Studio">
@@ -335,20 +530,38 @@
                                 <input type="tel" id="phone" name="phone" placeholder="(289) 000-0000" autocomplete="tel">
                             </div>
                             <div class="form-group">
-                                <label for="package">Preferred Package</label>
-                                <select id="package" name="package" class="form-select">
-                                    <option value="I'm not sure yet – need a recommendation" selected>I'm not sure yet – need a recommendation</option>
-                                    <option value="Level 1 - Starter Package ($299 CAD + $10/mo)">Level 1 - Starter Package ($299 CAD + $10/mo)</option>
-                                    <option value="Level 2 - Business Package ($499 CAD + $39/mo)">Level 2 - Business Package ($499 CAD + $39/mo)</option>
-                                    <option value="Level 3 - Enterprise Package ($799 CAD + $69/mo)">Level 3 - Enterprise Package ($799 CAD + $69/mo)</option>
-                                    <option value="Level 4 - Custom Apps & E-Commerce (Inquire)">Level 4 - Custom Apps &amp; E-Commerce (Inquire)</option>
+                                <label for="business">Business Name (optional)</label>
+                                <input type="text" id="business" name="business" placeholder="Your business name" autocomplete="organization">
+                            </div>
+                            <div class="form-group">
+                                <label for="website">Current Website (optional)</label>
+                                <input type="url" id="website" name="website" placeholder="https://yourcurrentsite.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactPreference">What Would You Like?</label>
+                                <select id="contactPreference" name="contact_preference" class="form-select">
+                                    <option value="Book a free 15-min call back" selected>Book a free 15-min call back</option>
+                                    <option value="Get a quote by email">Get a quote by email</option>
+                                    <option value="Just a question">Just a question</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="message">Project Details</label>
-                                <textarea id="message" name="message" rows="3" required placeholder="Tell me briefly about your business..."></textarea>
+                                <label for="package">Preferred Package</label>
+                                <select id="package" name="package" class="form-select">
+                                    <option value="I'm not sure yet – need a recommendation" selected>I'm not sure yet – need a recommendation</option>
+                                    <option value="Starter Package ($299 CAD + $10/mo hosting &amp; care)">Starter Package ($299 CAD + $10/mo hosting &amp; care)</option>
+                                    <option value="Business Package ($499 CAD + $39/mo hosting &amp; care)">Business Package ($499 CAD + $39/mo hosting &amp; care)</option>
+                                    <option value="Growth Package ($799 CAD + $69/mo hosting &amp; care)">Growth Package ($799 CAD + $69/mo hosting &amp; care)</option>
+                                    <option value="Custom Apps &amp; E-Commerce (Quote)">Custom Apps &amp; E-Commerce (Quote)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Project Details (optional)</label>
+                                <textarea id="message" name="message" rows="3" placeholder="Tell me briefly about your business..."></textarea>
                             </div>
                             <button type="submit" id="submitBtn" class="btn btn-primary btn-block">Send Message</button>
+                            <p class="form-next">What happens next: I reply, we have the free 15-min call, and your site can be live in 72 hours.</p>
+                            <p class="form-privacy">Your details are only used to reply to you — never shared or added to a mailing list.</p>
                             <div id="formResult" class="form-result" aria-live="polite"></div>
                         </form>
                     </div>
@@ -364,14 +577,16 @@
                 <div class="footer-brand">
                     <span class="brand-logo"><span class="logo-icon" aria-hidden="true">&#9889;</span> York Region <span>Web Studio</span></span>
                     <p class="slogan-sm">Your one-stop website solution.</p>
-                    <p class="service-cities">Serving the GTA and surrounding areas</p>
+                    <p class="service-cities">Serving Aurora, Newmarket, Richmond Hill, Vaughan, Markham and across York Region</p>
                 </div>
                 <nav class="footer-links" aria-label="Footer Navigation">
                     <a href="#process">How It Works</a>
-                    <a href="#services">Services</a>
                     <a href="#portfolio">Portfolio</a>
+                    <a href="#about">About</a>
                     <a href="#pricing">Pricing</a>
+                    <a href="#faq">FAQ</a>
                     <a href="#contact">Contact</a>
+                    <a href="aurora.html">Web Design in Aurora</a>
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms &amp; Conditions</a>
                 </nav>
@@ -390,6 +605,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 </html>
