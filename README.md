@@ -13,16 +13,19 @@ Official source code repository for the **York Region Web Studio** website ([yor
 ## Project Structure
 
 ```text
-├── index.html          # Single-page site (services, portfolio, pricing, contact)
+├── index.html          # Home page (the service, portfolio, pricing, contact)
+├── crm-bot.html        # CRM + built-in assistant feature page
+├── trade-estimator.html # Online estimator feature page
 ├── terms.html          # Website Terms of Use
 ├── privacy.html        # Privacy policy
+├── 404.html            # Custom not-found page
 ├── css/
 │   ├── styles.css      # Stylesheet source — edit this one
-│   └── styles.min.css  # Minified production build — the page loads this
+│   └── styles.min.css  # Minified production build — the pages load this
 ├── js/
-│   └── main.js         # Site JavaScript (loaded directly, not minified)
-├── images/
-│   └── newood-preview.jpg  # Portfolio preview of the Newood Millwork site
+│   ├── main.js         # JavaScript source — edit this one
+│   └── main.min.js     # Minified production build — the pages load this
+├── images/             # Portfolio preview (jpg + webp) and touch icon
 ├── logo.svg            # Studio logo
 ├── sitemap.xml         # XML sitemap
 ├── robots.txt          # Crawler rules
@@ -33,13 +36,17 @@ Official source code repository for the **York Region Web Studio** website ([yor
 
 ## Making Changes
 
-Edit `css/styles.css`, then regenerate the minified build before pushing — the page loads `css/styles.min.css`, so source edits alone won't show up live:
+Edit `css/styles.css`, then regenerate the minified build before pushing — the pages load `css/styles.min.css`, so source edits alone won't show up live:
 
 ```bash
 npx clean-css-cli -o css/styles.min.css css/styles.css
 ```
 
-`js/main.js` is loaded as-is; no build step needed for JavaScript.
+Same for JavaScript: edit `js/main.js`, then regenerate the minified build — the pages load `js/main.min.js`:
+
+```bash
+npx terser js/main.js -o js/main.min.js
+```
 
 Pushing to `main` deploys automatically via GitHub Pages (live within a minute or two).
 
