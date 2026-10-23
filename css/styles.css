@@ -274,6 +274,7 @@ p { color: var(--text-muted); font-size: 1rem; }
 /* Pricing */
 .pricing-grid { gap: 20px; align-items: stretch; }
 .pricing-grid.two { max-width: 860px; margin-left: auto; margin-right: auto; }
+.pricing-grid.one { max-width: 560px; margin-left: auto; margin-right: auto; }
 .pricing-card {
     background: #ffffff;
     border: 1px solid var(--border-color);
