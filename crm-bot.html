@@ -32,7 +32,7 @@
       "name": "The CRM — Part of the York Region Web Studio Service",
       "provider": { "@type": "ProfessionalService", "name": "York Region Web Studio", "telephone": "289-500-5666", "url": "https://yorkregionwebstudio.com/" },
       "areaServed": ["York Region", "Greater Toronto Area"],
-      "description": "A trade CRM application with a built-in assistant: lead tracking, lead-to-project conversion, project and production tracking, scheduling, team chat, and a role-based login portal for the whole team. Data stored in Canada. Part of one service with the client's website; flat monthly plans with unlimited users, no per-seat fees.",
+      "description": "A trade CRM application with a built-in assistant: lead tracking, lead-to-project conversion, project and production tracking, scheduling, team chat, and a role-based team login for the whole team. Data stored in Canada. Part of one service with the client's website; one flat monthly fee with unlimited users, no per-seat fees.",
       "url": "https://yorkregionwebstudio.com/crm-bot.html"
     }
     </script>
@@ -45,12 +45,12 @@
         {
           "@type": "Question",
           "name": "Where does my data live?",
-          "acceptedAnswer": { "@type": "Answer", "text": "In Canada. Your business data is stored in Canada and covered by a signed NDA. You can export everything at any time." }
+          "acceptedAnswer": { "@type": "Answer", "text": "In Canada. Your business data is stored in Canada and covered by a signed NDA. It runs in your browser — no downloads, nothing to install — and you can export everything at any time." }
         },
         {
           "@type": "Question",
-          "name": "How much does the service cost?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The CRM comes with your website as one service: a one-time setup fee, then one monthly subscription. Core is $399/mo with a $1,500 setup. Signature is $699/mo with setup from $2,500. Full Office is $999/mo with setup from $5,000. One flat fee covers your whole team — unlimited users, no per-seat charges. Pay annually and two months are free." }
+          "name": "How much does it cost in total?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The CRM comes with your website as one package — Signature, $699/mo plus a one-time setup of $2,500–$5,000, scoped to your customized feature. One flat fee covers your whole team — unlimited users, no per-seat charges — and your price is locked while you stay subscribed. Pay annually and two months are free. Bigger scope is priced as a custom quote. Your exact price is quoted in writing after a free 15-min call." }
         },
         {
           "@type": "Question",
@@ -60,7 +60,7 @@
         {
           "@type": "Question",
           "name": "Do I own my data?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes — completely. The data is yours: your customers, your leads, your job history, stored in Canada. Export everything at any time. If you ever cancel, you keep your complete database. Your plan price is also locked for as long as you stay subscribed — it never goes up." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — completely. The data is yours: your customers, your leads, your job history, stored in Canada. Export everything at any time. If you ever cancel, you keep your complete database." }
         }
       ]
     }
@@ -104,9 +104,9 @@
                     </p>
                     <div class="hero-actions">
                         <a href="#contact" class="btn btn-primary">Book a Free 15-Min Call</a>
-                        <a href="#tiers" class="btn btn-secondary">See Plans &amp; Pricing</a>
+                        <a href="#tiers" class="btn btn-secondary">See Pricing</a>
                     </div>
-                    <p class="hero-note">Built for trades &amp; cabinetry shops &middot; Data stored in Canada &middot; Unlimited users, no per-seat fees &middot; Included in the service from $399/mo</p>
+                    <p class="hero-note">Built for trades &amp; cabinetry shops &middot; Data stored in Canada &middot; Unlimited users, no per-seat fees &middot; Included in the Signature package, $699/mo</p>
                 </div>
             </div>
         </section>
@@ -165,12 +165,12 @@
             </div>
         </section>
 
-        <!-- Portal roles -->
-        <section class="section" aria-labelledby="portal-title">
+        <!-- Team roles -->
+        <section class="section" aria-labelledby="roles-title">
             <div class="container">
                 <div class="section-header">
-                    <h2 id="portal-title">One Login. The Right View for Each Person.</h2>
-                    <p>Everyone signs in to the same portal — and sees only what their role should see.</p>
+                    <h2 id="roles-title">One Login. The Right View for Each Person.</h2>
+                    <p>Everyone signs in to the same system — and sees only what their role should see.</p>
                 </div>
                 <div class="grid grid-4">
                     <article class="card feature-card">
@@ -202,7 +202,7 @@
             <div class="container">
                 <div class="section-header">
                     <h2 id="bot-title">The Bot Does the Busywork</h2>
-                    <p>Ask or tell it in plain words, right inside the portal. Roles decide who can do what, and every change is written to the activity log.</p>
+                    <p>Ask or tell it in plain words, right inside the system. Roles decide who can do what, and every change is written to the activity log.</p>
                 </div>
                 <div class="grid grid-3 process-grid">
                     <div class="card process-card">
@@ -245,56 +245,48 @@
             </div>
         </section>
 
-        <!-- Plans -->
+        <!-- Pricing -->
         <section id="tiers" class="section bg-light" aria-labelledby="tiers-title">
             <div class="container">
                 <div class="section-header">
                     <h2 id="tiers-title">One Service, One Price</h2>
-                    <p>The CRM comes with your website — one setup fee, one monthly subscription. Every plan covers your whole team with <b>unlimited users</b>. Pay annually and two months are free.</p>
+                    <p>The CRM comes with your website — one setup fee, one monthly subscription. The package covers your whole team with <b>unlimited users</b>. Pay annually and two months are free.</p>
                 </div>
-                <div class="grid grid-3 pricing-grid">
-                    <article class="pricing-card">
-                        <h3>Core</h3>
-                        <div class="price">$399 <span>CAD/mo</span></div>
-                        <div class="price-sub">Setup $1,500 one-time. The office, organized.</div>
-                        <ul class="price-features">
-                            <li>&#10003; Premium website included</li>
-                            <li>&#10003; Lead &amp; project boards</li>
-                            <li>&#10003; Production board &amp; scheduling calendar</li>
-                            <li>&#10003; Team chat &amp; built-in assistant</li>
-                            <li>&#10003; Standard support included</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-secondary btn-block package-cta" data-package="Core — Website + CRM ($399/mo + $1,500 setup)">Choose Core</a>
-                    </article>
-
+                <div class="grid grid-2 pricing-grid two">
                     <article class="pricing-card featured">
-                        <span class="popular-badge">Most Businesses Start Here</span>
+                        <span class="popular-badge">Everything Included</span>
                         <h3>Signature</h3>
                         <div class="price">$699 <span>CAD/mo</span></div>
-                        <div class="price-sub">Setup $2,500–$5,000 one-time. Built around your biggest pain.</div>
+                        <div class="price-sub">Setup $2,500–$5,000 one-time, scoped to your customized feature.</div>
                         <ul class="price-features">
-                            <li>&#10003; Everything in Core</li>
-                            <li>&#10003; One customized feature — estimator, portal, your pick</li>
-                            <li>&#10003; Automations &amp; follow-up reminders</li>
-                            <li>&#10003; Owner reports</li>
+                            <li>&#10003; Premium custom website</li>
+                            <li>&#10003; CRM — leads, projects, production, scheduling &amp; team chat</li>
+                            <li>&#10003; Built-in assistant, customized for your business</li>
+                            <li>&#10003; Online estimator, built with your prices</li>
+                            <li>&#10003; One more customized feature, built around your biggest pain</li>
+                            <li>&#10003; Automations, follow-up reminders &amp; owner reports</li>
+                            <li>&#10003; Hosting, security &amp; updates handled</li>
+                            <li>&#10003; Unlimited users — no per-seat fees</li>
+                            <li>&#10003; Data stored in Canada · NDA signed before onboarding · standard support included</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary btn-block package-cta" data-package="Signature — Website + CRM + Customized Feature ($699/mo + setup)">Choose Signature</a>
+                        <a href="#contact" class="btn btn-primary btn-block package-cta" data-package="Signature — Website + CRM + Assistant + Estimator + Customized Feature ($699/mo + setup)">Choose Signature</a>
                     </article>
 
                     <article class="pricing-card">
-                        <h3>Full Office</h3>
-                        <div class="price">$999 <span>CAD/mo</span></div>
-                        <div class="price-sub">Setup $5,000–$10,000 one-time, custom scope.</div>
+                        <h3>Custom Quote</h3>
+                        <div class="price">Custom</div>
+                        <div class="price-sub">Priced per project, quoted in writing.</div>
                         <ul class="price-features">
-                            <li>&#10003; Everything in Signature</li>
-                            <li>&#10003; Inventory — materials, equipment, hardware</li>
-                            <li>&#10003; Multi-crew scheduling &amp; job checklists</li>
-                            <li>&#10003; Priority support included</li>
+                            <li>&#10003; Everything in Signature, as your base</li>
+                            <li>&#10003; Extra customized features</li>
+                            <li>&#10003; Multiple locations or crews</li>
+                            <li>&#10003; Online store &amp; checkout</li>
+                            <li>&#10003; Deeper integrations with your other tools</li>
                         </ul>
-                        <a href="#contact" class="btn btn-secondary btn-block package-cta" data-package="Full Office — Website + CRM + Deeper Customization ($999/mo + setup)">Choose Full Office</a>
+                        <a href="#contact" class="btn btn-secondary btn-block package-cta" data-package="Custom Quote">Ask for a Custom Quote</a>
                     </article>
                 </div>
-                <p class="pricing-note">Not sure yet? Start with a <b>30-day pilot on Core</b> — your real data, set up for you, your old sheet untouched as backup. <b>Founding offer:</b> the first 5 businesses get setup waived and their plan price locked for 2 years.</p>
+                <p class="pricing-note"><b>Founding offer:</b> the first 5 businesses get setup waived and their package price locked for 2 years.</p>
             </div>
         </section>
 
@@ -303,13 +295,13 @@
             <div class="container">
                 <div class="section-header">
                     <h2 id="support-title">Support, Priced Straight</h2>
-                    <p>Every plan includes standard support. Add more only if you want it — monthly, cancel any time.</p>
+                    <p>Every package includes standard support. Add more only if you want it — monthly, cancel any time.</p>
                 </div>
                 <div class="grid grid-3 pricing-grid">
                     <article class="pricing-card">
                         <h3>Your Data, In Canada</h3>
                         <div class="price">Always</div>
-                        <div class="price-sub">Part of every plan, at no extra charge.</div>
+                        <div class="price-sub">Part of the package, at no extra charge.</div>
                         <ul class="price-features">
                             <li>&#10003; Data stored in Canada</li>
                             <li>&#10003; Signed NDA before onboarding</li>
@@ -317,20 +309,20 @@
                             <li>&#10003; Export your data any time</li>
                             <li>&#10003; Cancel and keep your database</li>
                         </ul>
-                        <a href="#tiers" class="btn btn-secondary btn-block">See the Plans</a>
+                        <a href="#tiers" class="btn btn-secondary btn-block">See Pricing</a>
                     </article>
 
                     <article class="pricing-card">
                         <h3>Standard Support</h3>
                         <div class="price">Included</div>
-                        <div class="price-sub">With every plan, at no extra charge.</div>
+                        <div class="price-sub">With the package, at no extra charge.</div>
                         <ul class="price-features">
                             <li>&#10003; Email support, next business day</li>
                             <li>&#10003; Software updates included</li>
                             <li>&#10003; Nightly backup checks</li>
                             <li>&#10003; Secure remote access maintained</li>
                         </ul>
-                        <a href="#tiers" class="btn btn-secondary btn-block">See the Plans</a>
+                        <a href="#tiers" class="btn btn-secondary btn-block">See Pricing</a>
                     </article>
 
                     <article class="pricing-card featured">
@@ -343,9 +335,8 @@
                             <li>&#10003; Remote fixes — we handle it, you watch</li>
                             <li>&#10003; Full Care: monthly system health check</li>
                             <li>&#10003; Full Care: quarterly on-site visit (GTA)</li>
-                            <li>&#10003; Priority included free on Full Office plans</li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary btn-block package-cta" data-package="Support — Priority / Full Care (add to my plan)">Add Support</a>
+                        <a href="#contact" class="btn btn-primary btn-block package-cta" data-package="Support — Priority / Full Care (add to my package)">Add Support</a>
                     </article>
                 </div>
             </div>
@@ -365,11 +356,11 @@
                     </details>
                     <details class="faq-item">
                         <summary>How much does it cost in total?</summary>
-                        <p>The CRM comes with your website as one service: a one-time setup fee, then one monthly subscription — Core $399/mo with a $1,500 setup, Signature $699/mo with setup from $2,500, Full Office $999/mo with setup from $5,000. One flat fee covers your whole team — unlimited users, no per-seat charges — and your price is locked while you stay subscribed. Pay annually and two months are free. Your exact price is quoted in writing after a free 15-min call.</p>
+                        <p>The CRM comes with your website as one package — Signature, $699/mo plus a one-time setup of $2,500–$5,000, scoped to your customized feature. One flat fee covers your whole team — unlimited users, no per-seat charges — and your price is locked while you stay subscribed. Pay annually and two months are free. Bigger scope is priced as a custom quote. Your exact price is quoted in writing after a free 15-min call.</p>
                     </details>
                     <details class="faq-item">
                         <summary>How long does it take to set up?</summary>
-                        <p>Most shops are live on the first tiers in 1 to 2 weeks once we have your current spreadsheet or data. Higher tiers are phased in, with your timeline confirmed in writing before we start.</p>
+                        <p>Most shops are live in 1 to 2 weeks once we have your current spreadsheet or data. Bigger setups are phased in, with your timeline confirmed in writing before we start.</p>
                     </details>
                     <details class="faq-item">
                         <summary>Do I own my data?</summary>
@@ -448,11 +439,9 @@
                             <div class="form-group">
                                 <label for="package">What Are You Interested In?</label>
                                 <select id="package" name="package" class="form-select">
-                                    <option value="30-Day Pilot on Core" selected>30-Day Pilot on Core</option>
-                                    <option value="Core — Website + CRM ($399/mo + $1,500 setup)">Core ($399/mo + $1,500 setup)</option>
-                                    <option value="Signature — Website + CRM + Customized Feature ($699/mo + setup)">Signature ($699/mo + setup)</option>
-                                    <option value="Full Office — Website + CRM + Deeper Customization ($999/mo + setup)">Full Office ($999/mo + setup)</option>
-                                    <option value="Support — Priority / Full Care (add to my plan)">Support — Priority / Full Care (add to my plan)</option>
+                                    <option value="Signature — Website + CRM + Assistant + Estimator + Customized Feature ($699/mo + setup)" selected>Signature ($699/mo + setup)</option>
+                                    <option value="Custom Quote">Custom Quote</option>
+                                    <option value="Support — Priority / Full Care (add to my package)">Support — Priority / Full Care (add to my package)</option>
                                     <option value="I'm not sure yet – need a recommendation">I'm not sure yet – need a recommendation</option>
                                 </select>
                             </div>
