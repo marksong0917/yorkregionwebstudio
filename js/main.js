@@ -128,6 +128,19 @@ document.addEventListener('DOMContentLoaded', () => {
             entries.forEach((e) => {
                 if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
             });
-        }, { threshold: 0.12 });
+        }, { threshold: 0, rootMargin: '0px 0px 240px 0px' });
         revealTargets.forEach((el) => io.observe(el));
+        // Safety sweep: if a fast scroll ever outruns the observer,
+        // anything already at or above the fold line is revealed anyway.
+        const sweep = () => {
+            revealTargets.forEach((el) => {
+                if (!el.classList.contains('in') &&
+                    el.getBoundingClientRect().top < window.innerHeight + 240) {
+                    el.classList.add('in');
+                    io.unobserve(el);
+                }
+            });
+        };
+        window.addEventListener('scroll', sweep, { passive: true });
+        sweep();
     }
