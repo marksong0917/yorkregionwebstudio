@@ -223,8 +223,12 @@ a.card:hover{transform:translateY(-4px);border-color:var(--brand-accent)}
 .footer-links{display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-5);list-style:none}
 .footer-links a{color:var(--on-dark-82)}
 .footer-links a:hover{color:var(--brand-accent-light)}
-.footer-bottom{display:flex;flex-wrap:wrap;gap:var(--space-4);align-items:center;border-top:1px solid var(--line-dark);padding:var(--space-4) 0;font-size:var(--text-small)}
-.made-in{margin-left:auto}
+.footer-bottom{display:flex;flex-wrap:wrap;gap:var(--space-4);align-items:center;justify-content:space-between;border-top:1px solid var(--line-dark);padding:var(--space-4) 0;font-size:var(--text-small)}
+.footer-serving{color:var(--on-dark-55)}
+.made-in{margin-left:auto;display:inline-flex;align-items:center;gap:10px}
+.maple-icon{width:15px;height:15px;flex:none}
+.footer-ig{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--line-dark);border-radius:50%;color:var(--on-dark-72)}
+.footer-ig:hover{color:var(--brand-accent-light);border-color:var(--brand-accent)}
 .legal-bar{background:var(--brand-dark);border-top:1px solid var(--line-dark);color:var(--on-dark-55);font-size:.8rem}
 .legal-bar-inner{max-width:var(--max);margin:0 auto;padding:14px var(--space-5);display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-5);align-items:center}
 .legal-links{display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-5);list-style:none;margin-left:auto}
