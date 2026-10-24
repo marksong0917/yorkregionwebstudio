@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (result) {
                 result.style.display = 'block';
-                result.style.color = '#334155';
+                result.className = 'form-result is-pending';
                 result.textContent = "Submitting your message...";
             }
 
@@ -87,19 +87,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (response.ok && data.success) {
                     if (result) {
-                        result.style.color = "#047857";
+                        result.className = 'form-result is-success';
                         result.innerHTML = "&#10004; Thank you! Your message has been sent. We'll reply — usually the same business day.";
                     }
                     form.reset();
                 } else {
                     if (result) {
-                        result.style.color = "#b91c1c";
+                        result.className = 'form-result is-error';
                         result.textContent = data.message || "Error submitting form. Please try again.";
                     }
                 }
             } catch (error) {
                 if (result) {
-                    result.style.color = "#b91c1c";
+                    result.className = 'form-result is-error';
                     result.textContent = "Connection error. Please call directly at (289) 500-5666.";
                 }
             } finally {
