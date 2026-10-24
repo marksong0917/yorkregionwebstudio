@@ -226,7 +226,7 @@ a.card:hover{transform:translateY(-4px);border-color:var(--brand-accent)}
 .footer-bottom{display:flex;flex-wrap:wrap;gap:var(--space-4);align-items:center;justify-content:space-between;border-top:1px solid var(--line-dark);padding:var(--space-4) 0;font-size:var(--text-small)}
 .footer-serving{color:var(--on-dark-55)}
 .made-in{margin-left:auto;display:inline-flex;align-items:center;gap:10px}
-.maple-icon{width:15px;height:15px;flex:none}
+.maple-icon{width:17px;height:17px;flex:none}
 .footer-ig{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--line-dark);border-radius:50%;color:var(--on-dark-72)}
 .footer-ig:hover{color:var(--brand-accent-light);border-color:var(--brand-accent)}
 .legal-bar{background:var(--brand-dark);border-top:1px solid var(--line-dark);color:var(--on-dark-55);font-size:.8rem}
