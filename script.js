@@ -6,7 +6,8 @@
   "use strict";
 
   /* ★ CONFIG — replace per company ─────────────────────────────────────── */
-  var FORMSUBMIT_ENDPOINT = "https://crm.newoodmillwork.com/api/intake/website/"; // company inbox
+  var FORMSUBMIT_ENDPOINT = "https://crm.newoodmillwork.com/api/intake/website/"; // form endpoint (Hub intake)
+  var COMPANY_EMAIL = "marksong0000@gmail.com"; // shown if a send fails
   /* ────────────────────────────────────────────────────────────────────── */
 
   /* Mobile nav */
@@ -51,8 +52,11 @@
     revealEls.forEach(function (el) { io.observe(el); });
   }
 
-  /* Quote form — progressive enhancement over the native FormSubmit POST.
-     Without JS the form still submits (full-page) to the same inbox. */
+  /* Quote form — progressive enhancement over the native POST.
+     Without JS the form still submits (full-page) to the same
+     endpoint. The submit button disables while sending (no
+     double-submits), and a failed send points at the company
+     email — the only contact channel these sites publish. */
   var form = document.getElementById("quoteForm");
   var status = document.getElementById("formStatus");
   if (form && status) {
@@ -68,6 +72,9 @@
       }
       var data = {};
       new FormData(form).forEach(function (v, k) { if (k.charAt(0) !== "_") data[k] = v; });
+      var btn = form.querySelector('button[type="submit"]');
+      var btnLabel = btn ? btn.textContent : "";
+      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
       status.textContent = "Sending…";
       status.className = "form-status";
       fetch(FORMSUBMIT_ENDPOINT, {
@@ -77,10 +84,14 @@
       }).then(function (r) {
         if (!r.ok) throw new Error("send failed");
         form.reset();
+        if (btn) { btn.disabled = false; btn.textContent = btnLabel; }
         status.textContent = "Thanks — your message is in. We reply within 1–2 business days.";
         status.className = "form-status is-success";
       }).catch(function () {
-        status.textContent = "Something went wrong sending — please call or email us directly.";
+        if (btn) { btn.disabled = false; btn.textContent = btnLabel; }
+        status.textContent = COMPANY_EMAIL
+          ? "Something went wrong sending — please email us directly at " + COMPANY_EMAIL + "."
+          : "Something went wrong sending — please try again in a moment.";
         status.className = "form-status is-error";
       });
     });
