@@ -30,4 +30,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://yorkregionwebstudio.com/disclaimer.html</loc>
+  </url>
+  <url>
+    <loc>https://yorkregionwebstudio.com/accessibility.html</loc>
+  </url>
 </urlset>
