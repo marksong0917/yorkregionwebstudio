@@ -291,3 +291,5 @@ a.card:hover{transform:translateY(-4px);border-color:var(--brand-accent)}
 .estimator-band .hero-actions{justify-content:center;margin-top:0}
 .subpage-body p{margin:0 0 var(--space-4);line-height:1.7}
 @media (max-width:760px){.case-grid{grid-template-columns:1fr}}
+
+.about-text{max-width:46rem}
