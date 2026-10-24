@@ -85,7 +85,7 @@
         if (!r.ok) throw new Error("send failed");
         form.reset();
         if (btn) { btn.disabled = false; btn.textContent = btnLabel; }
-        status.textContent = "Thanks — your message is in. We reply within 1–2 business days.";
+        status.textContent = "Thanks — we've received it. We reply within one business day.";
         status.className = "form-status is-success";
       }).catch(function () {
         if (btn) { btn.disabled = false; btn.textContent = btnLabel; }
