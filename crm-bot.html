@@ -1,589 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Newood Work Hub | Leads, Projects, Production, Email &amp; Team Chat in One System | York Region Web Studio</title>
-    <meta name="description" content="Newood Work Hub is the one-stop business management system inside our service: leads, customers, projects, production, scheduling, team chat, your email, reports and a built-in assistant — customized for your business. Data stored in Canada. No downloads.">
-    <meta name="author" content="York Region Web Studio">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0f172a">
-    <link rel="canonical" href="https://yorkregionwebstudio.com/crm-bot.html">
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" type="image/svg+xml" href="logo.svg">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Newood Work Hub | York Region Web Studio">
-    <meta property="og:description" content="One system for your whole business: leads, projects, production, scheduling, team chat and your email — with a built-in assistant that answers and updates in plain words. Data stored in Canada.">
-    <meta property="og:url" content="https://yorkregionwebstudio.com/crm-bot.html">
-    <meta property="og:image" content="https://yorkregionwebstudio.com/images/newood-preview.jpg">
-    <meta property="og:locale" content="en_CA">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://yorkregionwebstudio.com/images/newood-preview.jpg">
-    <meta name="twitter:title" content="Newood Work Hub | York Region Web Studio">
-    <meta name="twitter:description" content="Leads in, jobs out, nothing lost — one clean system for the whole business, with a built-in assistant. Data stored in Canada.">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Newood Work Hub",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Runs in your browser — nothing to install",
-      "provider": { "@type": "ProfessionalService", "name": "York Region Web Studio", "telephone": "289-500-5666", "url": "https://yorkregionwebstudio.com/" },
-      "areaServed": ["York Region", "Greater Toronto Area"],
-      "description": "A one-stop business management system with a built-in assistant: leads, customers, projects, production, scheduling, team chat, email in the Hub, service tickets, requests, forms, reports, and role-based permissions for the whole team — customized for each business. Data stored in Canada. Part of one service with the client's website; one flat monthly fee with unlimited users, no per-seat fees.",
-      "featureList": "Leads pipeline, Customers, Projects, Production board, Calendar, Team chat, Email in the Hub, Built-in assistant, Service tickets, Requests & approvals, Forms & checklists, Assets & maintenance, Inventory, Reports, Role-based permissions",
-      "url": "https://yorkregionwebstudio.com/crm-bot.html"
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Where does my data live?",
-          "acceptedAnswer": { "@type": "Answer", "text": "In Canada. Your business data is stored in Canada and covered by a signed NDA. It runs in your browser — no downloads, nothing to install — and you can export everything at any time." }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does it cost in total?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The Work Hub comes with your website as one package — Signature — and every project is priced by quote. After a free 15-min call, you get one written price: a one-time setup plus one flat monthly subscription covering your whole team — unlimited users, no per-seat charges. Founding clients (our first 5) get the setup fee waived, and your quoted rate is locked while you stay subscribed. Bigger scope is quoted in the same process, also in writing." }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does it take to set up?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Most shops are live in 1 to 2 weeks once we have your current spreadsheet or data. Bigger setups are phased in, with your timeline confirmed in writing before we start." }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I own my data?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes — completely. The data is yours: your customers, your leads, your job history, stored in Canada. Export everything at any time. If you ever cancel, you keep your complete database." }
-        }
-      ]
-    }
-    </script>
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.min.css?v=ds1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newood Work Hub | Leads, Projects, Production, Email &amp; Team Chat in One System | York Region Web Studio | York Region Web Studio</title>
+<meta name="description" content="Leads in. Jobs out. Nothing lost — one system for your whole business.">
+<meta name="theme-color" content="#0B1220">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.min.css?v=ds1">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <header class="navbar" role="banner">
-        <div class="container nav-container">
-            <a href="index.html" class="brand-logo" aria-label="York Region Web Studio Home">
-                <span class="logo-icon" aria-hidden="true">&#9889;</span> York Region <span>Web Studio</span>
-            </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Main navigation">
-                <a href="index.html#services" class="nav-link">The Service</a>
-                <a href="crm-bot.html" class="nav-link" aria-current="page">Work Hub</a>
-                <a href="trade-estimator.html" class="nav-link">Estimator</a>
-                <a href="index.html#pricing" class="nav-link">Pricing</a>
-                <a href="tel:2895005666" class="nav-cta-btn">Call (289) 500-5666</a>
-            </nav>
-        </div>
-    </header>
-
-    <main id="main-content">
-        <!-- Hero -->
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <h1 id="hero-title" class="hero-title">Newood Work Hub</h1>
-                    <p class="hero-slogan">Leads in. Jobs out. Nothing lost — one system for your whole business.</p>
-                    <p class="hero-description">
-                        Track every lead, turn it into a project in one click, and follow it through production and install — then keep going: your calendar, your team chat, your email, your reports, all in the same system, with a built-in assistant throughout. Your data is stored in Canada, and one flat monthly fee covers everyone — no per-seat rent, ever. No downloads: it runs in your browser.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary">Book a Free 15-Min Call</a>
-                        <a href="#tiers" class="btn btn-secondary">See Pricing</a>
-                    </div>
-                    <p class="hero-note">Running live today at Newood Millwork &middot; Data stored in Canada &middot; Unlimited users, no per-seat fees &middot; Included in the Signature package — priced by quote</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Problems -->
-        <section class="section" aria-labelledby="problems-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="problems-title">The Problems It Fixes</h2>
-                    <p>If this sounds familiar, your spreadsheet has outgrown the business.</p>
-                </div>
-                <div class="grid grid-3 process-grid">
-                    <div class="card process-card">
-                        <h3>Leads Get Lost</h3>
-                        <p>Enquiries sit in texts, emails, and sticky notes. Nobody knows who followed up — or who didn't.</p>
-                    </div>
-                    <div class="card process-card">
-                        <h3>Projects Are a Mess</h3>
-                        <p>Which jobs are in production? What's waiting on materials? When is install day? It's in three places, or in one person's head.</p>
-                    </div>
-                    <div class="card process-card">
-                        <h3>Follow-Ups Fall Through</h3>
-                        <p>Quotes sent and forgotten. Measures never booked. Customers wait for an answer that never comes — then buy from whoever replied first.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pipeline -->
-        <section class="section bg-light" aria-labelledby="pipeline-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="pipeline-title">One Flow, Start to Finish</h2>
-                    <p>Every job moves down the same clean line. You always see what is stuck, and where.</p>
-                </div>
-                <div class="grid grid-3 process-grid">
-                    <div class="card process-card">
-                        <div class="process-step-num">1</div>
-                        <h3>Leads Board</h3>
-                        <p>New Lead &rarr; Contacted &rarr; Quoted &rarr; Won or Lost. Every enquiry lands here, with follow-up reminders so none go cold.</p>
-                    </div>
-                    <div class="card process-card">
-                        <div class="process-step-num">2</div>
-                        <h3>One-Click Project</h3>
-                        <p>Win the job and the lead becomes a project — customer, quote, and details carry over. Nothing is typed twice.</p>
-                    </div>
-                    <div class="card process-card">
-                        <div class="process-step-num">3</div>
-                        <h3>Production Board</h3>
-                        <p>Design &rarr; Materials Ordered &rarr; In Production &rarr; Ready &rarr; Install &rarr; Complete. Every stage visible to the whole team.</p>
-                    </div>
-                </div>
-                <div class="section-header section-header-spaced">
-                    <p><strong>Every project gets one page:</strong> status, schedule, files, drawings, photos, and notes — everything about the job in one place.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Module tour -->
-        <section class="section" aria-labelledby="modules-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="modules-title">Every Module. One System.</h2>
-                    <p>This is the whole tour — everything below is live in the Hub today, in one login, under one permission system.</p>
-                </div>
-                <div class="grid grid-3">
-                    <article class="card feature-card">
-                        <div class="card-icon-wrapper" aria-hidden="true">&#127968;</div>
-                        <h3>Dashboard &amp; My Day</h3>
-                        <p>Open the Hub and see what needs attention: unassigned leads, jobs waiting, upcoming installs, maintenance due — plus your own tasks and approvals waiting on you.</p>
-                    </article>
-                    <article class="card feature-card">
-                        <div class="card-icon-wrapper" aria-hidden="true">&#128101;</div>
-                        <h3>Leads &amp; Customers</h3>
-                        <p>Every enquiry in one pipeline. Estimator quotes land here as leads on their own. Customer records link every job — and the Hub flags possible duplicates before they split your history.</p>
-                    </article>
-                    <article class="card feature-card">
-                        <div class="card-icon-wrapper" aria-hidden="true">&#128736;</div>
-                        <h3>Projects &amp; Production</h3>
-                        <p>One page per job: stage, schedule, files, photos, tasks. Unfinished jobs flow onto the production board automatically — progress, assignee, and dates at a glance, on the shop screen or a phone.</p>
-                    </article>
-                    <article class="card feature-card">
-                        <div class="card-icon-wrapper" aria-hidden="true">&#128197;</div>
-                        <h3>Calendar &amp; Scheduling</h3>
-                        <p>Measures, deliveries, and installs on one team calendar — with the right audience on each event: everyone, office only, management only, or private.</p>
-                    </article>
-                    <article class="card feature-card">
-                        <div class="card-icon-wrapper" aria-hidden="true">&#128172;</div>
-                        <h3>Team Chat</h3>
-                        <p>The organization room, team rooms, and direct messages — with @mentions, pins, and voice messages. Work talk stays at work, in the system, not scattered across personal phones.</p>
-                    </article>
-                    <article class="card feature-card">
-                        <div class="card-icon-wrapper" aria-hidden="true">&#9993;</div>
-                        <h3>Your Email, in the Hub</h3>
-                        <p>Each person connects their own mailbox and works it inside the Hub: three-pane reading, threaded replies, drafts, labels, undo-send. One click turns an email into a lead, a ticket, or a task. Nobody else can see your mail.</p>
-                    </article>
-                    <article class="card feature-card">
-                        <div class="card-icon-wrapper" aria-hidden="true">&#127903;</div>
-                        <h3>Tickets, Requests &amp; Forms</h3>
-                        <p>Service calls and deficiencies as tickets with owners and due dates. Time-off, purchase, and expense requests with one-click approvals. Build measure sheets, QC checklists, and delivery forms in minutes — submissions file themselves against the job.</p>
-                    </article>
-                    <article class="card feature-card">
-                        <div class="card-icon-wrapper" aria-hidden="true">&#128230;</div>
-                        <h3>Inventory, Assets &amp; Library</h3>
-                        <p>Materials, hardware, and equipment registers, machine and vehicle maintenance dates that surface before they're overdue, and your SOPs, policies, and guides in one library.</p>
-                    </article>
-                    <article class="card feature-card">
-                        <div class="card-icon-wrapper" aria-hidden="true">&#128200;</div>
-                        <h3>Reports, Search &amp; Activity</h3>
-                        <p>Owner reports across the business, one search box for projects, leads, customers, and tickets — and a full activity log of who changed what, so nothing is ever a mystery.</p>
-                    </article>
-                </div>
-                <div class="section-header section-header-spaced">
-                    <p><strong>Built for the whole crew:</strong> a real mobile layout for phones (no sideways spreadsheets), in <strong>English and Simplified Chinese</strong> — and modules switch on per role, so nobody wades through screens that aren't their job.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Team roles -->
-        <section class="section bg-light" aria-labelledby="roles-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="roles-title">One Login. The Right View for Each Person.</h2>
-                    <p>Everyone signs in to the same system — and sees only what their role should see.</p>
-                </div>
-                <div class="grid grid-4">
-                    <article class="card feature-card">
-                        <div class="card-icon-wrapper" aria-hidden="true">&#128081;</div>
-                        <h3>Owner</h3>
-                        <p>Sees everything — every job, every schedule, every report — including open balances, read-only. The full picture, in one view.</p>
-                    </article>
-                    <article class="card feature-card">
-                        <div class="card-icon-wrapper" aria-hidden="true">&#128188;</div>
-                        <h3>Manager / Office</h3>
-                        <p>Leads, customers, projects, email, scheduling, tickets, and approvals — the day-to-day running of the office, without the money screens.</p>
-                    </article>
-                    <article class="card feature-card">
-                        <div class="card-icon-wrapper" aria-hidden="true">&#128176;</div>
-                        <h3>Sales</h3>
-                        <p>Their own leads and customers — follow-ups, estimates, and conversions. Nobody else's pipeline, and no delete button.</p>
-                    </article>
-                    <article class="card feature-card">
-                        <div class="card-icon-wrapper" aria-hidden="true">&#128296;</div>
-                        <h3>Shop Floor</h3>
-                        <p>Production, projects, calendar, tickets, and forms — just the work in front of them, on the shop screen or a phone.</p>
-                    </article>
-                </div>
-                <div class="section-header section-header-spaced">
-                    <p><strong>Permission is the menu:</strong> if a role doesn't have a module, it doesn't appear — not in the menu, not in search. Admins set each role's menu; each person can pin a few favourites of their own. Even outside partners can hold a locked-down account — a subcontractor sees only the leads they submitted, nothing else.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- The built-in assistant -->
-        <section class="section" aria-labelledby="bot-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="bot-title">The Built-In Assistant Does the Busywork</h2>
-                    <p>Ask or tell it in plain words — English or Chinese — right inside the Hub. It works from your live records, under the same permissions as the person asking.</p>
-                </div>
-                <div class="grid grid-3 process-grid">
-                    <div class="card process-card">
-                        <h3>Ask, and Know</h3>
-                        <p>"What stage is that kitchen job at?" "Who is on installs this week?" "How many jobs are in production?" Real answers from your real data — never invented numbers.</p>
-                    </div>
-                    <div class="card process-card">
-                        <h3>Tell It — Confirmed First</h3>
-                        <p>"Move that job to install." "Add a task: order hinges, due Friday." Before anything is written, the assistant shows you the exact change and waits for your tap. Every change lands in the activity log, with your original words beside it.</p>
-                    </div>
-                    <div class="card process-card">
-                        <h3>Yours, and Private</h3>
-                        <p>The assistant runs on your own server, in your building — your business data never leaves it. It also posts a short morning brief to the team room: yesterday's movement and today's installs, before the day starts.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Data in Canada -->
-        <section class="section" aria-labelledby="local-title">
-            <div class="container">
-                <div class="offer-card">
-                    <span class="showcase-tag">Your Data, In Your Hands</span>
-                    <h2 id="local-title">Your Data, Stored in Canada.</h2>
-                    <p>Your customer list, your leads, your job history — stored in Canada and covered by a signed NDA. It runs in your browser: no downloads, nothing to install, easy for the whole team to use. Other CRMs charge you per user, every month, for access to your own customers. We don't.</p>
-                    <div class="guarantee-box">
-                        <h3>What That Means for You</h3>
-                        <p>&#10003; Fully Canadian service — Made in Canada, data stored in Canada.<br>
-                        &#10003; An NDA is signed before we start.<br>
-                        &#10003; Automatic backups every night.<br>
-                        &#10003; You own your data — export everything, any time.<br>
-                        &#10003; Login + role permissions on every screen, and a full activity log.<br>
-                        &#10003; One flat monthly fee for your whole team — unlimited users, no per-seat charges.<br>
-                        &#10003; Your plan price is locked while you stay subscribed — it never goes up.<br>
-                        &#10003; If you ever cancel, you keep your complete database.</p>
-                    </div>
-                    <p>Running live today at Newood Millwork in Concord: 138 projects, the whole team, one system — it replaced their master spreadsheet and their Monday board. Ask on the call and we will walk you through the real thing.</p>
-                    <p><a href="#contact" class="btn btn-primary">Book a Free 15-Min Call</a></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Customization -->
-        <section class="section bg-light" aria-labelledby="custom-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="custom-title">Configured Around Your Business — Not the Other Way Round</h2>
-                    <p>Most systems make you adapt to them. The Hub is set up around how your shop already works — by us, before your team ever logs in.</p>
-                </div>
-                <div class="grid grid-3 process-grid">
-                    <div class="card process-card">
-                        <h3>Your Stages, Fields &amp; Templates</h3>
-                        <p>Your project stages, your intake fields, your checklists and forms — measure sheets, install QC, delivery checks — set up as your templates, not generic ones.</p>
-                    </div>
-                    <div class="card process-card">
-                        <h3>Your Estimator, Your Prices</h3>
-                        <p>The online estimator is configured with your prices, materials, and options, and its quotes land in the Hub as leads. <a href="trade-estimator.html">See the estimator feature &rarr;</a></p>
-                    </div>
-                    <div class="card process-card">
-                        <h3>More When You Need It</h3>
-                        <p>Start with the modules your business needs today; switch more on as you grow. Something truly yours — a feature built from scratch — is scoped and quoted in the same process, in writing.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing -->
-        <section id="tiers" class="section" aria-labelledby="tiers-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="tiers-title">One Service, One Quote</h2>
-                    <p>The Work Hub comes with your website as one package — priced by written quote after a short call. One flat monthly price covers your whole team with <b>unlimited users</b>, no per-seat fees.</p>
-                </div>
-                <div class="grid pricing-grid one">
-                    <article class="pricing-card featured">
-                        <span class="popular-badge">Everything Included</span>
-                        <h3>Signature</h3>
-                        <div class="price">Custom Quote</div>
-                        <div class="price-sub">Priced per project, in writing, after a short call. One flat monthly price once quoted — no per-seat fees, ever.</div>
-                        <ul class="price-features">
-                            <li>&#10003; Premium custom website</li>
-                            <li>&#10003; Newood Work Hub — leads, projects, production, scheduling, team chat, email &amp; reports</li>
-                            <li>&#10003; Built-in assistant throughout the Hub, customized for your business</li>
-                            <li>&#10003; Online estimator — our proven template, loaded with your prices</li>
-                            <li>&#10003; One extra from our feature menu — follow-up automations, review requests, or owner reports</li>
-                            <li>&#10003; Setup, data import &amp; team training handled for you</li>
-                            <li>&#10003; Hosting, security &amp; updates handled</li>
-                            <li>&#10003; Unlimited users — no per-seat fees</li>
-                            <li>&#10003; Data stored in Canada · NDA signed before onboarding · standard support included</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-primary btn-block package-cta" data-package="Signature — Newood Work Hub + Website + Assistant + Estimator (custom quote)">Get My Quote</a>
-                    </article>
-                </div>
-                <p class="pricing-note">Bigger scope — extra locations, online store, or a feature built from scratch — is quoted in the same process.</p>
-                <p class="pricing-note"><b>Founding offer:</b> the first 5 businesses get setup waived and their quoted rate locked for 2 years.</p>
-            </div>
-        </section>
-
-        <!-- Support & server -->
-        <section id="support" class="section" aria-labelledby="support-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="support-title">Support, Priced Straight</h2>
-                    <p>Every package includes standard support. Add more only if you want it — monthly, add or remove any time; removals run to the end of the paid month.</p>
-                </div>
-                <div class="grid grid-3 pricing-grid">
-                    <article class="pricing-card">
-                        <h3>Your Data, In Canada</h3>
-                        <div class="price">Always</div>
-                        <div class="price-sub">Part of the package, at no extra charge.</div>
-                        <ul class="price-features">
-                            <li>&#10003; Data stored in Canada</li>
-                            <li>&#10003; Signed NDA before onboarding</li>
-                            <li>&#10003; Nightly automatic backups</li>
-                            <li>&#10003; Export your data any time</li>
-                            <li>&#10003; Cancel and keep your database</li>
-                        </ul>
-                        <a href="#tiers" class="btn btn-secondary btn-block">See Pricing</a>
-                    </article>
-
-                    <article class="pricing-card">
-                        <h3>Standard Support</h3>
-                        <div class="price">Included</div>
-                        <div class="price-sub">With the package, at no extra charge.</div>
-                        <ul class="price-features">
-                            <li>&#10003; Email support, next business day</li>
-                            <li>&#10003; Software updates included</li>
-                            <li>&#10003; Nightly backup checks</li>
-                            <li>&#10003; Secure remote access maintained</li>
-                        </ul>
-                        <a href="#tiers" class="btn btn-secondary btn-block">See Pricing</a>
-                    </article>
-
-                    <article class="pricing-card featured">
-                        <span class="popular-badge">For Busy Shops</span>
-                        <h3>Priority &amp; Full Care</h3>
-                        <div class="price">$149–$299 <span>CAD/mo</span></div>
-                        <div class="price-sub">Priority $149/mo &middot; Full Care $299/mo.</div>
-                        <ul class="price-features">
-                            <li>&#10003; Same-business-day response, by phone</li>
-                            <li>&#10003; Remote fixes — we handle it, you watch</li>
-                            <li>&#10003; Full Care: monthly system health check</li>
-                            <li>&#10003; Full Care: quarterly on-site visit (GTA)</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-primary btn-block package-cta" data-package="Support — Priority / Full Care (add to my package)">Add Support</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section id="faq" class="section" aria-labelledby="faq-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="faq-title">Questions, Answered Straight</h2>
-                    <p>Quick answers, no fine print.</p>
-                </div>
-                <div class="faq-list">
-                    <details class="faq-item">
-                        <summary>Where does my data live?</summary>
-                        <p>In Canada. Your business data is stored in Canada and covered by a signed NDA. It runs in your browser — no downloads, nothing to install — and you can export everything at any time.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>How much does it cost in total?</summary>
-                        <p>The Work Hub comes with your website as one package — Signature — and every project is priced by quote. After a free 15-min call, you get one written price: a one-time setup plus one flat monthly subscription covering your whole team — unlimited users, no per-seat charges. Founding clients (our first 5) get the setup fee waived, and your quoted rate is locked while you stay subscribed. Bigger scope is quoted in the same process, also in writing.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>How long does it take to set up?</summary>
-                        <p>Most shops are live in 1 to 2 weeks once we have your current spreadsheet or data. Bigger setups are phased in, with your timeline confirmed in writing before we start.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>Do I own my data?</summary>
-                        <p>Yes — completely. The data is yours: your customers, your leads, your job history, stored in Canada. Export everything at any time. If you ever cancel, you keep your complete database.</p>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="section contact-section" aria-labelledby="contact-title">
-            <div class="container">
-                <div class="contact-wrapper">
-                    <div class="contact-info">
-                        <h2 id="contact-title">Fix the spreadsheet chaos.</h2>
-                        <p>One call, and we map your leads, projects, production, chat, and email into one clean system — data stored in Canada.</p>
-                        <p class="response-promise">Replies usually land the same business day.</p>
-                        <div class="contact-actions">
-                            <a href="tel:2895005666" class="btn btn-primary">Call (289) 500-5666</a>
-                            <a href="sms:2895005666" class="btn btn-secondary">Text Us</a>
-                        </div>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <span class="icon" aria-hidden="true">&#128222;</span>
-                                <div>
-                                    <strong>Phone</strong>
-                                    <a href="tel:2895005666">(289) 500-5666</a>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <span class="icon" aria-hidden="true">&#9993;</span>
-                                <div>
-                                    <strong>Email</strong>
-                                    <a href="mailto:marksong0000@gmail.com">marksong0000@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <span class="icon" aria-hidden="true">&#128205;</span>
-                                <div>
-                                    <strong>Service Area</strong>
-                                    <span>Serving the GTA and surrounding areas</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-form-card">
-                        <h3>Ask About the Work Hub</h3>
-                        <p class="form-intro">Tell us about your shop and where the chaos is. Replies usually land the same business day.</p>
-                        <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-                            <input type="hidden" name="access_key" value="3f63b007-996e-4bd0-b3d5-812fcb5ec5db">
-                            <input type="hidden" name="subject" value="New Lead - Newood Work Hub - York Region Web Studio">
-                            <input type="hidden" name="from_name" value="York Region Web Studio Site">
-                            <input type="checkbox" name="botcheck" class="hidden">
-
-                            <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" required placeholder="John Smith" autocomplete="name">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" required placeholder="john@example.com" autocomplete="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" placeholder="(289) 000-0000" autocomplete="tel">
-                            </div>
-                            <div class="form-group">
-                                <label for="business">Business Name (optional)</label>
-                                <input type="text" id="business" name="business" placeholder="Your business name" autocomplete="organization">
-                            </div>
-                            <div class="form-group">
-                                <label for="website">Current Website (optional)</label>
-                                <input type="url" id="website" name="website" placeholder="https://yourcurrentsite.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="package">What Are You Interested In?</label>
-                                <select id="package" name="package" class="form-select">
-                                    <option value="Signature — Newood Work Hub + Website + Assistant + Estimator (custom quote)" selected>Signature (custom quote)</option>
-                                    <option value="Custom Quote">Custom Quote</option>
-                                    <option value="Support — Priority / Full Care (add to my package)">Support — Priority / Full Care (add to my package)</option>
-                                    <option value="I'm not sure yet – need a recommendation">I'm not sure yet – need a recommendation</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Your Biggest Headache (optional)</label>
-                                <textarea id="message" name="message" rows="3" placeholder="e.g. Leads in texts, follow-ups fall through..."></textarea>
-                            </div>
-                            <button type="submit" id="submitBtn" class="btn btn-primary btn-block">Send Message</button>
-                            <p class="form-next">What happens next: we reply, we have the free 15-min call, and you get your exact price in writing.</p>
-                            <p class="form-privacy">Your details are only used to reply to you — never shared or added to a mailing list.</p>
-                            <div id="formResult" class="form-result" aria-live="polite"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer" role="contentinfo">
-        <div class="container footer-container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <span class="brand-logo"><span class="logo-icon" aria-hidden="true">&#9889;</span> York Region <span>Web Studio</span></span>
-                    <p class="slogan-sm">Your one-stop shop to tech solution.</p>
-                    <p class="service-cities">Serving Aurora, Newmarket, Richmond Hill, Vaughan, Markham and across York Region</p>
-                </div>
-                <nav class="footer-links" aria-label="Footer Navigation">
-                    <a href="index.html#process">How It Works</a>
-                    <a href="index.html#portfolio">Portfolio</a>
-                    <a href="index.html#services">Services</a>
-                    <a href="trade-estimator.html">Estimator Feature</a>
-                    <a href="crm-bot.html">Work Hub</a>
-                    <a href="index.html#pricing">Pricing</a>
-                    <a href="index.html#faq">FAQ</a>
-                    <a href="index.html#contact">Contact</a>
-                </nav>
-            </div>
-            <div class="footer-bottom">
-                <div class="footer-social">
-                    <a class="social-icon" href="https://www.instagram.com/marksong0917/" target="_blank" rel="noopener" aria-label="Instagram">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
-                    </a>
-                    <div class="made-in-canada">
-                        <span class="flag" aria-hidden="true">&#127464;&#127462;</span> Made in Canada
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-<div class="legal-bar">
-  <div class="legal-bar-inner">
-    <p class="legal-copy">Copyright &copy; 2026 York Region Web Studio. All rights reserved.</p>
-    <nav class="legal-links" aria-label="Legal">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="accessibility.html">Accessibility</a>
-      <span class="legal-loc">Aurora, Ontario, Canada</span>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="York Region Web Studio — home">
+      <img src="assets/logo.svg" alt="York Region Web Studio" width="142" height="48">
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="crm-bot.html" class="active">Work Hub</a>
+      <a href="trade-estimator.html">Estimator</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="disclaimer.html">Disclaimer | York Region Web Studio</a>
+      <a href="accessibility.html">Accessibility | York Region Web Studio</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
+    <a class="btn btn-call" href="tel:12895005666">(289) 500-5666</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+</header>
+
+<main id="main">
+  <!-- ══ SUB-PAGE HERO (compact variant) ══ -->
+  <section class="hero hero-compact">
+    <div class="hero-media"><img src="assets/img/newood-preview-web.jpg" alt=""></div>
+    <div class="hero-scrim"></div>
+    <div style="position:relative;width:100%">
+      <p class="hero-breadcrumb"><a href="index.html">← Back to home</a></p>
+      <div class="wrap hero-inner" style="padding-top:var(--space-6)">
+        <span class="eyebrow eyebrow-light">Work Hub</span>
+        <h1>Newood Work Hub</h1>
+        <p class="hero-lead">Leads in. Jobs out. Nothing lost — one system for your whole business.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="index.html#contact">Get Your Free Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PAGE BODY ══ -->
+  <section class="reveal">
+    <div class="wrap legal-inner subpage-body">
+        <p>Track every lead, turn it into a project in one click, and follow it through production and install — then keep going: your calendar, your team chat, your email, your reports, all in the same system, with a built-in assistant throughout. Your data is stored in Canada, and one flat monthly fee covers everyone — no per-seat rent, ever. No downloads: it runs in your browser.</p>
+        <p>The Problems It Fixes: Leads Get Lost — Enquiries sit in texts, emails, and sticky notes. Nobody knows who followed up — or who didn&#x27;t. Projects Are a Mess — Which jobs are in production? What&#x27;s waiting on materials? When is install day? It&#x27;s in three places, or in one person&#x27;s head. Follow-Ups Fall Through — Quotes sent and forgotten. Measures never booked. Customers wait for an answer that never comes — then buy from whoever replied first.</p>
+        <p>One Flow, Start to Finish: Leads Board — New Lead → Contacted → Quoted → Won or Lost. Every enquiry lands here, with follow-up reminders so none go cold. One-Click Project — Win the job and the lead becomes a project — customer, quote, and details carry over. Nothing is typed twice. Production Board — Design → Materials Ordered → In Production → Ready → Install → Complete. Every stage visible to the whole team. Every project gets one page: status, schedule, files, drawings, photos, and notes — everything about the job in one place.</p>
+        <p>Every Module. One System. Dashboard &amp; My Day — Open the Hub and see what needs attention: unassigned leads, jobs waiting, upcoming installs, maintenance due — plus your own tasks and approvals waiting on you. Leads &amp; Customers — Every enquiry in one pipeline. Estimator quotes land here as leads on their own. Customer records link every job — and the Hub flags possible duplicates before they split your history. Projects &amp; Production — One page per job: stage, schedule, files, photos, tasks. Unfinished jobs flow onto the production board automatically — progress, assignee, and dates at a glance, on the shop screen or a phone. Calendar &amp; Scheduling — Measures, deliveries, and installs on one team calendar — with the right audience on each event: everyone, office only, management only, or private.</p>
+        <p>Team Chat — The organization room, team rooms, and direct messages — with @mentions, pins, and voice messages. Work talk stays at work, in the system, not scattered across personal phones. Your Email, in the Hub — Each person connects their own mailbox and works it inside the Hub: three-pane reading, threaded replies, drafts, labels, undo-send. One click turns an email into a lead, a ticket, or a task. Nobody else can see your mail. Tickets, Requests &amp; Forms — Service calls and deficiencies as tickets with owners and due dates. Time-off, purchase, and expense requests with one-click approvals. Build measure sheets, QC checklists, and delivery forms in minutes — submissions file themselves against the job. Inventory, Assets &amp; Library — Materials, hardware, and equipment registers, machine and vehicle maintenance dates that surface before they&#x27;re overdue, and your SOPs, policies, and guides in one library. Reports, Search &amp; Activity — Owner reports across the business, one search box for projects, leads, customers, and tickets — and a full activity log of who changed what, so nothing is ever a mystery.</p>
+        <p>Built for the whole crew: a real mobile layout for phones (no sideways spreadsheets), in English and Simplified Chinese — and modules switch on per role, so nobody wades through screens that aren&#x27;t their job.</p>
+        <p>One Login. The Right View for Each Person. Owner — Sees everything — every job, every schedule, every report — including open balances, read-only. The full picture, in one view. Manager / Office — Leads, customers, projects, email, scheduling, tickets, and approvals — the day-to-day running of the office, without the money screens. Sales — Their own leads and customers — follow-ups, estimates, and conversions. Nobody else&#x27;s pipeline, and no delete button. Shop Floor — Production, projects, calendar, tickets, and forms — just the work in front of them, on the shop screen or a phone. Permission is the menu: if a role doesn&#x27;t have a module, it doesn&#x27;t appear — not in the menu, not in search. Admins set each role&#x27;s menu; each person can pin a few favourites of their own. Even outside partners can hold a locked-down account — a subcontractor sees only the leads they submitted, nothing else.</p>
+        <p>The Built-In Assistant Does the Busywork: Ask or tell it in plain words — English or Chinese — right inside the Hub. It works from your live records, under the same permissions as the person asking. Ask, and Know — “What stage is that kitchen job at?” “Who is on installs this week?” “How many jobs are in production?” Real answers from your real data — never invented numbers. Tell It — Confirmed First — “Move that job to install.” “Add a task: order hinges, due Friday.” Before anything is written, the assistant shows you the exact change and waits for your tap. Every change lands in the activity log, with your original words beside it. Yours, and Private — The assistant runs on your own server, in your building — your business data never leaves it. It also posts a short morning brief to the team room: yesterday&#x27;s movement and today&#x27;s installs, before the day starts.</p>
+        <p>Your Data, Stored in Canada. Your customer list, your leads, your job history — stored in Canada and covered by a signed NDA. It runs in your browser: no downloads, nothing to install, easy for the whole team to use. Other CRMs charge you per user, every month, for access to your own customers. We don&#x27;t. Fully Canadian service — Made in Canada, data stored in Canada. An NDA is signed before we start. Automatic backups every night. You own your data — export everything, any time. Login + role permissions on every screen, and a full activity log. One flat monthly fee for your whole team — unlimited users, no per-seat charges. Your plan price is locked while you stay subscribed — it never goes up. If you ever cancel, you keep your complete database. Running live today at Newood Millwork in Concord: 138 projects, the whole team, one system — it replaced their master spreadsheet and their Monday board.</p>
+        <p>Configured Around Your Business — Not the Other Way Round: Most systems make you adapt to them. The Hub is set up around how your shop already works — by us, before your team ever logs in. Your Stages, Fields &amp; Templates — Your project stages, your intake fields, your checklists and forms — measure sheets, install QC, delivery checks — set up as your templates, not generic ones. Your Estimator, Your Prices — The online estimator is configured with your prices, materials, and options, and its quotes land in the Hub as leads. More When You Need It — Start with the modules your business needs today; switch more on as you grow. Something truly yours — a feature built from scratch — is scoped and quoted in the same process, in writing.</p>
+        <p>Support, Priced Straight: Every package includes standard support. Add more only if you want it — monthly, add or remove any time; removals run to the end of the paid month. Standard Support — Included: Email support, next business day. Software updates included. Nightly backup checks. Secure remote access maintained. Priority &amp; Full Care — $149–$299 CAD/mo: Priority $149/mo · Full Care $299/mo. Same-business-day response, by phone. Remote fixes — we handle it, you watch. Full Care: monthly system health check. Full Care: quarterly on-site visit (GTA).</p>
+        <p>Questions, Answered Straight: Where does my data live? In Canada. Your business data is stored in Canada and covered by a signed NDA. It runs in your browser — no downloads, nothing to install — and you can export everything at any time. How much does it cost in total? The Work Hub comes with your website as one package — Signature — and every project is priced by quote. After a free 15-min call, you get one written price: a one-time setup plus one flat monthly subscription covering your whole team — unlimited users, no per-seat charges. Founding clients (our first 5) get the setup fee waived, and your quoted rate is locked while you stay subscribed. Bigger scope is quoted in the same process, also in writing. How long does it take to set up? Most shops are live in 1 to 2 weeks once we have your current spreadsheet or data. Bigger setups are phased in, with your timeline confirmed in writing before we start. Do I own my data? Yes — completely. The data is yours: your customers, your leads, your job history, stored in Canada. Export everything at any time. If you ever cancel, you keep your complete database.</p>
+    </div>
+  </section>
+
+  <!-- ══ CTA BAND ══ -->
+  <section class="cta-band reveal">
+    <div class="wrap">
+      <h2>Ready to Start?</h2>
+      <p>Tell us about your project. We reply within 1–2 business days.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="index.html#contact">Get Your Free Quote</a>
+        <a class="btn btn-ghost" href="tel:12895005666">Call (289) 500-5666</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo.svg" alt="York Region Web Studio" width="165" height="56">
+        <p class="footer-sub">Newood Work Hub — Your One-Stop Business Management Service</p>
+        <p class="footer-tagline">One system runs your whole business — leads, projects, production, scheduling, team chat, email, and reports, with a built-in assistant thro</p>
+        <p>Serving Aurora, Newmarket, Richmond Hill, Vaughan, Markham and across York Region</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="crm-bot.html">Work Hub</a></li>
+        <li><a href="trade-estimator.html">Estimator</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="disclaimer.html">Disclaimer | York Region Web Studio</a></li>
+        <li><a href="accessibility.html">Accessibility | York Region Web Studio</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>🇨🇦 Made in Canada</span>
+      <span class="made-in">York Region Web Studio — Aurora, Newmarket, Richmond Hill, Vaughan, Markham and across York Region</span>
+    </div>
+  </div>
+  <div class="legal-bar">
+    <div class="legal-bar-inner">
+      <span>Copyright © <span id="year">2026</span> York Region Web Studio. All rights reserved.</span>
+      <ul class="legal-links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="accessibility.html">Accessibility</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a class="cta-call" href="tel:12895005666">Call Now</a>
+  <a class="cta-quote" href="index.html#contact">Free Quote</a>
 </div>
 
-    <script src="js/main.min.js?v=ds1"></script>
+<script>(function(){try{var d=JSON.stringify({token:"7l3U62wA63Vgq4213Ah6P21Mx3800rvS",path:location.pathname,ref:document.referrer||""});if(navigator.sendBeacon){navigator.sendBeacon("https://crm.newoodmillwork.com/api/website/hit/",new Blob([d],{type:"text/plain"}))}}catch(e){}})();</script>
+<script src="script.min.js?v=ds1"></script>
 </body>
 </html>
