@@ -52,6 +52,15 @@
     revealEls.forEach(function (el) { io.observe(el); });
   }
 
+  /* Plan cards: a plan's CTA scrolls to the form (href="#contact")
+     with that plan preselected in the optional plan select. */
+  document.querySelectorAll("[data-plan]").forEach(function (el) {
+    el.addEventListener("click", function () {
+      var sel = document.getElementById("qPlan");
+      if (sel) sel.value = el.getAttribute("data-plan");
+    });
+  });
+
   /* Quote form — progressive enhancement over the native POST.
      Without JS the form still submits (full-page) to the same
      endpoint. The submit button disables while sending (no
