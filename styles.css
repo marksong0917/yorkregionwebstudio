@@ -29,7 +29,7 @@
   --paper-soft:#F8FAFC;          /* alternating section background          */
   --ink:#0F172A;                 /* headings                                */
   --ink-soft:#475569;            /* body text                               */
-  --ink-faint:#94A3B8;           /* captions, meta                          */
+  --ink-faint:#64748B;           /* captions, meta                          */
   --line:#E2E8F0;                /* hairline borders                        */
   --header-bg:rgba(255,255,255,.95); /* dark header. Light variant: rgba(255,255,255,.95) + --header-text:var(--ink) */
   --header-text:var(--ink);
@@ -148,7 +148,7 @@ a.card:hover{transform:translateY(-4px);border-color:var(--brand-accent)}
 .card h3{margin:var(--space-3) 0 var(--space-2)}
 .card-num{font-family:var(--font-mono);font-size:var(--text-eyebrow);letter-spacing:.16em;color:var(--brand-metal-text)}
 .card-link{font-family:var(--font-mono);font-size:var(--text-small);color:var(--brand-accent-deep);display:inline-block;margin-top:var(--space-4)}
-.card-media{margin:calc(var(--card-pad) * -1) calc(var(--card-pad) * -1) 0;aspect-ratio:4/3;object-fit:cover;width:calc(100% + var(--card-pad) * 2);max-width:none}
+.card picture{display:block;margin:calc(var(--card-pad) * -1) calc(var(--card-pad) * -1) 0;aspect-ratio:3/4;overflow:hidden}.card-media{display:block;width:100%;height:100%;object-fit:cover;max-width:none}
 .bracket{position:relative}
 .bracket::before,.bracket::after{content:"";position:absolute;width:18px;height:18px;border:2px solid var(--brand-accent);z-index:2}
 .bracket::before{top:-2px;left:-2px;border-right:0;border-bottom:0}
@@ -156,8 +156,8 @@ a.card:hover{transform:translateY(-4px);border-color:var(--brand-accent)}
 
 /* ── Gallery ──────────────────────────────────────────────────────────────── */
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4)}
-.work-item{position:relative;overflow:hidden;border-radius:var(--radius)}
-.work-item img{aspect-ratio:1/1;object-fit:cover;width:100%;transition:transform .4s var(--ease)}
+.work-item{position:relative;overflow:hidden;border-radius:var(--radius);aspect-ratio:1/1}
+.work-item picture{position:absolute;inset:0;display:block}.work-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s var(--ease)}
 .work-item:hover img{transform:scale(1.04)}
 .work-item figcaption{position:absolute;left:0;right:0;bottom:0;padding:var(--space-6) var(--space-4) var(--space-3);background:linear-gradient(to top,rgba(0,0,0,.78),transparent);color:var(--on-dark);font-size:var(--text-small);line-height:1.35}
 
@@ -279,7 +279,7 @@ a.card:hover{transform:translateY(-4px);border-color:var(--brand-accent)}
 /* ══ Website v2 blocks (alpha 0.46): case study, testimonials,
    estimator band, sub-page body — shared system, brand via tokens. */
 .case-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);align-items:center}
-.case-media img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius)}
+.case-media{aspect-ratio:4/3;overflow:hidden;border-radius:var(--radius)}.case-media picture{display:block;width:100%;height:100%}.case-media img{width:100%;height:100%;object-fit:cover}
 .testimonial{margin:0}
 .testimonial blockquote{margin:0 0 var(--space-4);font-size:var(--text-h3);line-height:1.45;color:var(--ink)}
 .testimonial figcaption{color:var(--ink-faint);font-weight:600}
@@ -291,14 +291,3 @@ a.card:hover{transform:translateY(-4px);border-color:var(--brand-accent)}
 @media (max-width:760px){.case-grid{grid-template-columns:1fr}}
 
 .about-text{max-width:46rem}
-
-/* ── Pricing plans (inside .estimator-band) ─────────────────────────────── */
-.plan-from{font-size:var(--text-lead);color:var(--on-dark)}
-.plan-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-5);max-width:1080px;margin:0 auto var(--space-6);text-align:left}
-.plan-card{background:var(--white);border-radius:var(--radius);padding:var(--card-pad)}
-.plan-card h3{margin:0 0 var(--space-2);color:var(--ink)}
-.plan-price{font-family:var(--font-display);font-size:1.85rem;font-weight:700;line-height:1.15;color:var(--ink)}
-.plan-price span{font-family:var(--font-body);font-size:.95rem;font-weight:500;color:var(--ink-soft)}
-.plan-card p{color:var(--ink-soft);margin:var(--space-2) 0 0;max-width:none}
-@media (max-width:980px){.plan-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:560px){.plan-grid{grid-template-columns:1fr;max-width:460px}}
