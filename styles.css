@@ -303,7 +303,19 @@ a.card:hover{transform:translateY(-4px);border-color:var(--brand-accent)}
 .plan-price{font-family:var(--font-display);font-size:1.85rem;font-weight:700;line-height:1.15;color:var(--ink)}
 .plan-price span{font-family:var(--font-body);font-size:.95rem;font-weight:500;color:var(--ink-soft)}
 .plan-card p{color:var(--ink-soft);margin:var(--space-2) 0 0;max-width:none}
+.plan-card p.plan-extra{font-size:var(--text-small);color:var(--ink-faint)}
+.plan-card.plan-highlight{outline:2px solid var(--brand-accent);outline-offset:-2px}
 .plan-card .btn{margin-top:var(--space-4);width:100%}
+.features-band{background:var(--paper-soft)}
+.flow-strip{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:var(--space-2);margin:0 auto var(--space-6);max-width:920px}
+.flow-step{font-family:var(--font-mono);font-size:.82rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:.5rem .95rem;white-space:nowrap}
+.flow-arrow{color:var(--ink-faint);font-weight:600}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5);text-align:left}
+.feature-item{border-top:2px solid var(--brand-accent);padding-top:var(--space-3)}
+.feature-item h3{margin:0 0 var(--space-1);font-size:1.05rem}
+.feature-item p{margin:0;color:var(--ink-soft)}
+@media (max-width:980px){.feature-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.feature-grid{grid-template-columns:1fr}.flow-strip{justify-content:flex-start}}
 @media (max-width:980px){.plan-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.plan-grid{grid-template-columns:1fr;max-width:460px}}
 .form-promise{text-align:center;margin-top:var(--space-3)}
