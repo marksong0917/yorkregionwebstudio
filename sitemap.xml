@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap-0.9">
   <url>
     <loc>https://yorkregionwebstudio.com/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -23,5 +23,25 @@
   </url>
   <url>
     <loc>https://yorkregionwebstudio.com/accessibility.html</loc>
+  </url>
+  <url>
+    <loc>https://yorkregionwebstudio.com/templates/millwork-trades/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yorkregionwebstudio.com/templates/retail-showroom/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yorkregionwebstudio.com/templates/professional-services/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yorkregionwebstudio.com/templates/food-hospitality/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northgate Millwork — Custom Kitchens & Cabinetry (Sample Layout)</title>
+<meta name="description" content="Sample website layout for a millwork and trades business, by York Region Web Studio. Fictional business shown for layout demonstration.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--dark:#171310;--dark2:#221b15;--paper:#faf7f2;--ink:#1d1710;--soft:#6f6455;--accent:#a4713a;--line:#e5ddd0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.15}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.sample-note{background:var(--dark);color:#d8c9ae;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:8px 16px}
+header{background:var(--paper);border-bottom:1px solid var(--line)}
+.hd{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-family:Manrope;font-weight:800;font-size:1.25rem;color:var(--ink);text-decoration:none}
+.logo span{color:var(--accent)}
+nav a{color:var(--ink);text-decoration:none;margin-left:26px;font-size:.95rem;font-weight:500}
+nav a.cta{background:var(--dark);color:#fff;padding:10px 18px;border-radius:8px}
+.hero{position:relative;color:#fff}
+.hero img{width:100%;height:520px;object-fit:cover;display:block}
+.hero .scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,12,8,.78) 0%,rgba(16,12,8,.35) 55%,rgba(16,12,8,0) 100%)}
+.hero .inner{position:absolute;inset:0;display:flex;align-items:center}
+.hero h1{font-size:clamp(2.1rem,4.5vw,3.4rem);max-width:600px}
+.hero p{margin:16px 0 26px;max-width:480px;color:#efe7da;font-size:1.08rem}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:13px 26px;border-radius:8px;font-weight:600}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.65);margin-left:10px}
+section{padding:72px 0}
+.eyebrow{color:var(--accent);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}
+h2{font-size:clamp(1.6rem,3vw,2.2rem);margin:10px 0 14px}
+.rows{border-top:1px solid var(--line);margin-top:26px}
+.row{display:grid;grid-template-columns:70px 1fr 1.4fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.row .n{font-family:Manrope;font-weight:800;color:var(--accent)}
+.row h3{font-size:1.1rem}
+.row p{color:var(--soft)}
+.dark{background:var(--dark);color:#f3ede2}
+.dark p{color:#c9bda6}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:30px}
+.step{border-top:2px solid var(--accent);padding-top:14px}
+.step h3{margin-bottom:6px;font-size:1.02rem}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+.tile{border-radius:12px;min-height:170px;padding:20px;color:#fff;display:flex;align-items:flex-end;font-family:Manrope;font-weight:700}
+.t1{background:linear-gradient(160deg,#4a3826,#2a2016)}.t2{background:linear-gradient(160deg,#8a6a42,#5d4527)}.t3{background:linear-gradient(160deg,#c8b08a,#9a7c52)}
+.contact{background:var(--dark2);color:#f3ede2;text-align:center}
+.contact p{color:#c9bda6;max-width:520px;margin:0 auto 24px}
+footer{background:var(--dark);color:#a08e72;padding:26px 0;font-size:.9rem}
+.ft{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:760px){.row{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.strip{grid-template-columns:1fr}.hero img{height:440px}nav a:not(.cta){display:none}}
+</style>
+</head>
+<body>
+<div class="sample-note">Sample layout — fictional business, shown by York Region Web Studio</div>
+<header><div class="wrap hd">
+  <a class="logo" href="#">Northgate<span>.</span></a>
+  <nav><a href="#services">Services</a><a href="#process">Process</a><a href="#work">Our Work</a><a class="cta" href="#contact">Get a Quote</a></nav>
+</div></header>
+
+<div class="hero">
+  <img src="../../assets/img/templates/tpl-millwork.webp" alt="Custom walnut cabinetry in a bright showroom">
+  <div class="scrim"></div>
+  <div class="inner"><div class="wrap">
+    <h1>Custom kitchens, built in our own shop.</h1>
+    <p>Northgate Millwork designs, builds and installs cabinetry for homes across the region — measured to the millimetre, finished by hand.</p>
+    <a class="btn" href="#contact">Start Your Project</a><a class="btn ghost" href="#work">See Our Work</a>
+  </div></div>
+</div>
+
+<section id="services"><div class="wrap">
+  <span class="eyebrow">What We Build</span>
+  <h2>Three services. One crew.</h2>
+  <div class="rows">
+    <div class="row"><span class="n">01</span><h3>Custom Kitchens</h3><p>Full kitchen cabinetry designed around how you cook — islands, pantries, and storage that fits the room.</p></div>
+    <div class="row"><span class="n">02</span><h3>Closets &amp; Storage</h3><p>Walk-ins, reach-ins and built-ins that turn wasted corners into working storage.</p></div>
+    <div class="row"><span class="n">03</span><h3>Commercial Millwork</h3><p>Reception desks, retail fixtures and office fit-outs, built to drawing and installed on schedule.</p></div>
+  </div>
+</div></section>
+
+<section class="dark" id="process"><div class="wrap">
+  <span class="eyebrow">How It Works</span>
+  <h2>From first measure to final install</h2>
+  <div class="steps">
+    <div class="step"><h3>Measure</h3><p>We visit, measure, and talk through what the room has to do.</p></div>
+    <div class="step"><h3>Design</h3><p>Drawings and finishes, priced in writing before anything is cut.</p></div>
+    <div class="step"><h3>Build</h3><p>Your job is built start to finish in our own shop.</p></div>
+    <div class="step"><h3>Install</h3><p>Our own crew installs, adjusts, and leaves the room clean.</p></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <span class="eyebrow">Recent Work</span>
+  <h2>Rooms we have finished lately</h2>
+  <div class="strip">
+    <div class="tile t1">Walnut kitchen — King City</div>
+    <div class="tile t2">White oak closet — Vaughan</div>
+    <div class="tile t3">Retail counter — Newmarket</div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <h2>Tell us about your room.</h2>
+  <p>Send a few details and we will reply within one business day with next steps and a time to measure.</p>
+  <a class="btn" href="#">Request a Quote</a>
+</div></section>
+
+<footer><div class="wrap ft">
+  <span>© 2026 Northgate Millwork (fictional)</span>
+  <span>Sample layout by York Region Web Studio</span>
+</div></footer>
+</body>
+</html>
