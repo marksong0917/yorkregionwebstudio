@@ -78,6 +78,14 @@
 .tpl-card .tpl-open{color:var(--accent-text);font-weight:600;font-size:.93rem}
 @media (max-width:880px){.tpl-grid{grid-template-columns:1fr}}
 .footer-ig{width:auto;height:36px;padding:0 14px;border-radius:999px;gap:8px;text-decoration:none;font-size:.9rem}
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-5);max-width:820px;margin:0 auto}
+.team-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-1);padding:var(--space-6);text-align:center}
+.team-avatar{width:64px;height:64px;margin:0 auto var(--space-4);border-radius:50%;background:var(--brand-dark);color:var(--on-dark);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:1.25rem}
+.team-card h3{margin-bottom:var(--space-1)}
+.team-role{color:var(--brand-accent-deep);font-weight:600;font-size:.93rem;margin-bottom:var(--space-3)}
+.team-card p{color:var(--ink-soft);font-size:.96rem}
+.team-soon .team-avatar{background:var(--paper-soft);color:var(--ink-faint);border:1px dashed var(--line);font-size:1.6rem}
+@media (max-width:880px){.team-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body class="single-page">
@@ -220,11 +228,24 @@
     </div>
   </div>
   <div class="wrap">
-    <div class="section-header" style="margin-bottom:0">
-      <span class="eyebrow">Meet the Developer</span>
-      <h2>The developer behind the studio</h2>
-      <p class="lead">Ze (Mark) Song — founder of York Region Web Studio, and a senior full-stack developer based in Aurora, Ontario. His live project dashboard holds the rest of the work: Foxuma, the published guides, and his open-source tools.</p>
-      <p><a class="btn btn-primary" href="https://marksong0917.github.io/" target="_blank" rel="noopener">See the Project Dashboard</a></p>
+    <div class="section-header">
+      <span class="eyebrow">Meet the Team</span>
+      <h2>The people behind the studio</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar" aria-hidden="true">MS</div>
+        <h3>Ze (Mark) Song</h3>
+        <p class="team-role">Founder &amp; Senior Full-Stack Developer · Aurora</p>
+        <p>Builds the studio's websites and the systems behind them — Foxuma, the published guides, and the open-source tools.</p>
+        <a class="card-link" href="https://marksong0917.github.io/" target="_blank" rel="noopener">See the project dashboard →</a>
+      </div>
+      <div class="team-card team-soon">
+        <div class="team-avatar" aria-hidden="true">?</div>
+        <h3>Coming soon</h3>
+        <p class="team-role">Developer</p>
+        <p>This seat is being filled.</p>
+      </div>
     </div>
   </div>
 </section>
