@@ -25,6 +25,12 @@
     <loc>https://yorkregionwebstudio.com/accessibility.html</loc>
   </url>
   <url>
+    <loc>https://yorkregionwebstudio.com/templates/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://yorkregionwebstudio.com/templates/millwork-trades/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
