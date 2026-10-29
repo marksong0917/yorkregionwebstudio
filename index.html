@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Manrope:wght@500;600;700;800&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.min.css?v=ds12">
+<link rel="stylesheet" href="styles.min.css?v=ds13">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -76,6 +76,10 @@
 .tpl-card h3{margin-bottom:var(--space-1)}
 .tpl-card p{color:var(--ink-soft);font-size:.96rem}
 .tpl-card .tpl-open{color:var(--accent-text);font-weight:600;font-size:.93rem}
+.tpl-card img{transition:transform .6s ease}
+.tpl-card:hover img{transform:scale(1.04)}
+.tpl-card .tpl-open{display:inline-block;transition:transform .3s ease}
+.tpl-card:hover .tpl-open{transform:translateX(3px)}
 @media (max-width:880px){.tpl-grid{grid-template-columns:1fr}}
 .footer-ig{width:auto;height:36px;padding:0 14px;border-radius:999px;gap:8px;text-decoration:none;font-size:.9rem}
 </style>

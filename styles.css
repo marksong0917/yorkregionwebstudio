@@ -75,6 +75,32 @@
   --scrim:linear-gradient(to top,rgba(0,0,0,.78),rgba(0,0,0,.28) 55%,rgba(0,0,0,.45));
 }
 
+/* ══════════════════════════════════════════════════════════════════════════
+   TEMPLATE FRAMEWORK v2 — MODERN TOKEN LAYER (2026-10-29)
+   One framework for every public site + the YRWS demo templates: same
+   skeleton, components and motion; brand differs only via the brand
+   block. These values supersede the v1 shape/type values above wherever
+   components read the tokens. Canonical record:
+   ~/workspace/design-system/TEMPLATE-FRAMEWORK.md
+   ══════════════════════════════════════════════════════════════════════════ */
+:root{
+  --radius:14px;                 /* cards, panels, media              */
+  --radius-sm:10px;              /* buttons, fields, menu items       */
+  --radius-lg:20px;              /* form card, team card, big panels  */
+  --shadow-1:0 1px 2px rgba(2,6,23,.04),0 10px 28px -14px rgba(2,6,23,.12);
+  --shadow-2:0 2px 6px rgba(2,6,23,.05),0 24px 44px -18px rgba(2,6,23,.18);
+  --shadow-3:0 32px 64px -16px rgba(2,6,23,.30);
+  --text-hero:clamp(2.6rem,5vw + 1rem,4.25rem);
+  --text-h2:clamp(1.85rem,1.6vw + 1.2rem,2.6rem);
+  --text-h3:1.3rem;
+  --text-lead:1.2rem;
+  --leading-heading:1.08;
+  --section-pad:clamp(72px,9vw,112px);
+  --dur:.3s;
+  --accent-wash:color-mix(in srgb,var(--brand-accent) 14%,transparent);
+  --accent-ring:color-mix(in srgb,var(--brand-accent) 18%,transparent);
+}
+
 /* ── Reset + base ─────────────────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:88px}
@@ -360,3 +386,100 @@ a.card:hover{transform:translateY(-4px);border-color:var(--brand-accent)}
 .team-role{color:var(--brand-accent-deep);font-weight:600;font-size:.93rem;margin-bottom:var(--space-3)}
 .team-card p{color:var(--ink-soft);font-size:.96rem}
 @media (max-width:880px){.team-grid{grid-template-columns:1fr}}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   TEMPLATE FRAMEWORK v2 — MODERN COMPONENTS (2026-10-29)
+   Overrides + refinements on the v1 components above; every value still
+   resolves to tokens. Chinese-school composition (clean density, spacing
+   rhythm, big readable type) with Linear/Stripe-grade finish.
+   ══════════════════════════════════════════════════════════════════════════ */
+::selection{background:var(--accent-ring)}
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3{letter-spacing:-.02em}
+
+/* Buttons — soft radius, accent glow, press state */
+.btn{border-radius:var(--radius-sm);transition:transform var(--dur) var(--ease),background var(--dur),color var(--dur),border-color var(--dur),box-shadow var(--dur) var(--ease)}
+.btn-primary{box-shadow:0 12px 24px -12px color-mix(in srgb,var(--brand-accent) 70%,transparent)}
+.btn-primary:hover{box-shadow:0 16px 30px -12px color-mix(in srgb,var(--brand-accent) 75%,transparent)}
+.btn:active{transform:translateY(0)}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+
+/* Header — light glass with a real hairline, slim on desktop */
+.site-header{border-bottom:1px solid var(--line);backdrop-filter:saturate(1.5) blur(12px);-webkit-backdrop-filter:saturate(1.5) blur(12px)}
+@media (min-width:981px){.header-inner{height:72px}}
+.main-nav a{transition:color var(--dur)}
+.nav-drop-menu{border-radius:var(--radius)}
+.nav-drop-menu a{border-radius:8px}
+
+/* Hero — brand-tinted wash instead of the flat black scrim, pill eyebrow */
+.hero-scrim{background:linear-gradient(100deg,color-mix(in srgb,var(--brand-dark) 90%,transparent) 0%,color-mix(in srgb,var(--brand-dark) 58%,transparent) 52%,color-mix(in srgb,var(--brand-accent) 26%,transparent) 115%)}
+.hero h1{border-left:0;padding-left:0;letter-spacing:-.025em}
+.hero .eyebrow{display:inline-block;padding:7px 13px;border:1px solid rgba(255,255,255,.24);border-radius:999px;background:rgba(255,255,255,.06)}
+.hero-lead{font-size:var(--text-lead)}
+
+/* Cards — resting elevation, deeper hover lift */
+.card{box-shadow:var(--shadow-1)}
+a.card{transition:transform var(--dur) var(--ease),border-color var(--dur),box-shadow var(--dur) var(--ease)}
+a.card:hover{box-shadow:var(--shadow-2)}
+.card-link{transition:transform var(--dur) var(--ease),color var(--dur)}
+.card-link:hover{transform:translateX(3px)}
+.feature-item{background:var(--white);border:1px solid var(--line);border-top:2px solid var(--brand-accent);border-radius:var(--radius);padding:var(--space-5);transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.feature-item:hover{transform:translateY(-3px);box-shadow:var(--shadow-1)}
+.plan-card{border-radius:var(--radius);box-shadow:var(--shadow-1)}
+
+/* Process — airier step rhythm */
+.process-step{padding-top:var(--space-5)}
+.process-step .num{font-size:.95rem}
+
+/* FAQ — padded cards (fixes flush h3 in the div variant), details chevron */
+.faq-item{padding:var(--space-5) var(--space-5) var(--space-4);box-shadow:var(--shadow-1);transition:border-color var(--dur)}
+.faq-item:hover{border-color:color-mix(in srgb,var(--brand-accent) 45%,var(--line))}
+.faq-item h3{font-size:1.08rem;margin-bottom:var(--space-2)}
+.faq-item p{padding:0}
+details.faq-item{padding:0}
+details.faq-item summary{padding:var(--space-4) 52px var(--space-4) var(--space-5);position:relative}
+details.faq-item summary::-webkit-details-marker{display:none}
+details.faq-item summary::after{content:"";position:absolute;right:22px;top:50%;width:9px;height:9px;border-right:2px solid var(--ink-faint);border-bottom:2px solid var(--ink-faint);transform:translateY(-70%) rotate(45deg);transition:transform var(--dur) var(--ease)}
+details.faq-item[open ] summary::after{transform:translateY(-30%) rotate(225deg)}
+details.faq-item p{padding:0 var(--space-5) var(--space-4)}
+
+/* Bands — soft accent glow over the dark surfaces */
+.estimator-band,.cta-band{background-image:radial-gradient(640px 320px at 50% -60px,var(--accent-wash),transparent 70%)}
+.contact-section{background-image:radial-gradient(820px 420px at 88% -120px,color-mix(in srgb,var(--brand-accent) 20%,transparent),transparent 62%)}
+.features-band{background:linear-gradient(180deg,var(--paper-soft),var(--paper))}
+.team-teaser{background:linear-gradient(180deg,var(--paper-soft),var(--paper))}
+
+/* Dark band (framework component: process / about on dark) */
+.band-dark{background:var(--brand-dark);color:var(--on-dark)}
+.band-dark h2,.band-dark h3{color:var(--on-dark)}
+.band-dark p{color:var(--on-dark-72)}
+.band-dark .eyebrow{color:var(--brand-accent-light)}
+.band-dark .process-step{border-top-color:var(--line-dark)}
+.band-dark .process-step .num{color:var(--brand-accent-light)}
+
+/* Form — rounded fields with a soft focus ring; form card fully rounded */
+.form-card{border-radius:var(--radius-lg)}
+.form-group input,.form-group select,.form-group textarea{border-radius:var(--radius-sm);padding:12px 16px;transition:border-color var(--dur),box-shadow var(--dur)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{box-shadow:0 0 0 4px var(--accent-ring)}
+
+/* Work / case media */
+.work-item img{transition:transform .6s var(--ease)}
+.case-media{box-shadow:var(--shadow-1)}
+
+/* Team */
+.team-card{border-radius:var(--radius-lg);box-shadow:var(--shadow-2);padding:var(--space-7)}
+.team-avatar{background:linear-gradient(135deg,var(--brand-accent),var(--brand-dark-2));box-shadow:var(--shadow-1)}
+@media (max-width:760px){.team-card{padding:var(--space-6)}}
+
+/* Footer — two-step dark gradient, pill social button everywhere */
+.site-footer{background:linear-gradient(180deg,var(--brand-dark-2),var(--brand-dark) 38%)}
+.footer-links a,.legal-links a{transition:color var(--dur)}
+.footer-ig{width:auto;height:36px;padding:0 14px;border-radius:999px;gap:8px;font-size:.9rem}
+.footer-ig:hover{background:rgba(255,255,255,.06)}
+
+/* Mobile CTA — lifts off the page edge */
+.mobile-cta{box-shadow:0 -10px 28px rgba(2,6,23,.20)}
+
+/* Reveal — slightly longer travel, same reduced-motion respect */
+.js-reveal .reveal{transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js-reveal .reveal.in{transform:none}
