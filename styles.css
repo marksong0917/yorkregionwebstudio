@@ -233,6 +233,25 @@ a.card:hover{transform:translateY(-4px);border-color:var(--brand-accent)}
 .legal-links a{color:var(--on-dark-55);display:inline-block;padding:5px 0}
 .legal-links a:hover{color:var(--on-dark)}
 
+/* ── Services dropdown (header nav) ─────────────────────────────────────────
+   Pure CSS: the menu opens on hover / keyboard focus. In the mobile panel
+   (single-page sites, <=980px) it flattens into the link list. */
+.nav-drop{position:relative;display:flex;align-items:center}
+.nav-drop::after{content:"";position:absolute;left:-8px;right:-8px;top:100%;height:16px}
+.nav-drop-btn{display:inline-flex;align-items:center;gap:6px}
+.nav-drop-menu{position:absolute;top:calc(100% + 16px);left:50%;transform:translate(-50%,6px);min-width:240px;background:var(--paper);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow-2);padding:8px;opacity:0;visibility:hidden;transition:opacity var(--dur) var(--ease),transform var(--dur) var(--ease),visibility var(--dur);z-index:60}
+.nav-drop:hover .nav-drop-menu,.nav-drop:focus-within .nav-drop-menu{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.nav-drop-menu a{display:block;padding:10px 12px;border-radius:6px;color:var(--ink);white-space:normal}
+.nav-drop-menu a:hover{background:var(--paper-soft);color:var(--brand-accent-deep)}
+.nav-drop-menu a small{display:block;color:var(--ink-faint);font-size:.78rem;font-weight:400;margin-top:2px}
+@media (max-width:980px){
+  body.single-page .nav-drop{display:block}
+  body.single-page .nav-drop::after{display:none}
+  body.single-page .nav-drop-menu{position:static;transform:none;opacity:1;visibility:visible;min-width:0;background:none;border:0;border-radius:0;box-shadow:none;padding:0 0 0 var(--space-5)}
+  body.single-page .nav-drop-menu a{color:var(--on-dark-82)}
+  body.single-page .nav-drop-menu a small{color:var(--on-dark-55)}
+}
+
 /* ── Mobile CTA ───────────────────────────────────────────────────────────── */
 .mobile-cta{display:none}
 
