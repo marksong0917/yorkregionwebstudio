@@ -71,7 +71,7 @@
 .tpl-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-5);margin-top:var(--space-6)}
 .tpl-card{display:block;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-decoration:none;color:var(--ink);box-shadow:var(--shadow-1);transition:transform .25s ease,box-shadow .25s ease}
 .tpl-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-2)}
-.tpl-card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.tpl-card img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block}
 .tpl-card .tpl-body{padding:var(--space-4) var(--space-5) var(--space-5)}
 .tpl-card h3{margin-bottom:var(--space-1)}
 .tpl-card p{color:var(--ink-soft);font-size:.96rem}
@@ -244,22 +244,21 @@
 
 <!-- ══════════════ CONTACT ══════════════ -->
 <section class="contact-section" id="contact" aria-label="Contact">
-  <div class="wrap">
-    <span class="eyebrow">Contact</span>
-    <h2>Ready to Start Your Project?</h2>
-    <p class="lead">Tell us about your project. We reply within one business day.</p>
-    <div class="contact-grid">
+  <div class="wrap contact-grid">
       <div>
-        <h3>Contact</h3>
+        <span class="eyebrow eyebrow-light">Contact</span>
+        <h2>Ready to Start Your Project?</h2>
+        <p>Tell us about your project. We reply within one business day.</p>
         <ul class="contact-list">
-          <li><strong>Email</strong><a href="mailto:marksong0000@gmail.com">marksong0000@gmail.com</a></li>
+          <li><span class="label">Email</span><a href="mailto:marksong0000@gmail.com">marksong0000@gmail.com</a></li>
         </ul>
       </div>
       <div class="form-card">
         <form class="quote-form" id="quoteForm" method="POST" action="https://crm.newoodmillwork.com/api/intake/website/">
           <input type="hidden" name="token" value="7l3U62wA63Vgq4213Ah6P21Mx3800rvS">
           <input type="hidden" name="_subject" value="Website quote request — York Region Web Studio">
-          <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="c" value="">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <div class="form-row">
             <div class="form-group">
               <label for="qName">Your Name *</label>
@@ -287,7 +286,6 @@
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
-    </div>
   </div>
 </section>
 
