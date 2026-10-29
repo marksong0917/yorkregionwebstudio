@@ -397,6 +397,9 @@ a.card:hover{transform:translateY(-4px);border-color:var(--brand-accent)}
 body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 h1,h2,h3{letter-spacing:-.02em}
 
+/* Nav toggle — full 44px touch target (was 38×41) */
+@media (max-width:980px){body.single-page .nav-toggle{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px}}
+
 /* Buttons — soft radius, accent glow, press state */
 .btn{border-radius:var(--radius-sm);transition:transform var(--dur) var(--ease),background var(--dur),color var(--dur),border-color var(--dur),box-shadow var(--dur) var(--ease)}
 .btn-primary{box-shadow:0 12px 24px -12px color-mix(in srgb,var(--brand-accent) 70%,transparent)}
