@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" preserveAspectRatio="xMidYMid slice">
-  <!-- ★ PLACEHOLDER PROJECT PHOTO — replace with real project photos
-       (WebP, square crop works everywhere this is used). -->
-  <rect width="900" height="900" fill="#F1EEE6"/>
-  <rect x="40" y="40" width="820" height="820" fill="none" stroke="#8A6D42" stroke-width="2" stroke-dasharray="12 10"/>
-  <text x="450" y="445" font-family="JetBrains Mono, monospace" font-size="26" letter-spacing="4" fill="#6E5732" text-anchor="middle">PROJECT PHOTO</text>
-  <text x="450" y="485" font-family="Arial, sans-serif" font-size="20" fill="#545B68" text-anchor="middle">replace with a real photo</text>
-</svg>
