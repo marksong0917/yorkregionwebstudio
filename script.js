@@ -6,7 +6,7 @@
   "use strict";
 
   /* ★ CONFIG — replace per company ─────────────────────────────────────── */
-  var FORMSUBMIT_ENDPOINT = "https://crm.newoodmillwork.com/api/intake/website/"; // form endpoint (Hub intake)
+  var FORMSUBMIT_ENDPOINT = "https://forms.foxuma.com/api/intake/website/"; // form endpoint (edge intake -> Hub)
   var COMPANY_EMAIL = "marksong0000@gmail.com"; // shown if a send fails
   /* ────────────────────────────────────────────────────────────────────── */
 
