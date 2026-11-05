@@ -2,6 +2,7 @@
 # (Pages' default is a 308 to the extensionless path; our canonicals,
 # internal links, and sitemap all use .html, so rewrite instead).
 /accessibility.html /accessibility 200
+/bookkeeping.html /bookkeeping 200
 /disclaimer.html /disclaimer 200
 /foxuma.html /foxuma 200
 /page.html /page 200
