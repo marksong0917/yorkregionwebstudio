@@ -6,6 +6,9 @@
 <title>Custom Website Design in York Region | York Region Web Studio</title>
 <meta name="description" content="Custom websites for businesses in York Region and the GTA — designed, built and looked after by our studio in Canada. Quoted in writing, no surprise add-ons.">
 <link rel="canonical" href="https://yorkregionwebstudio.com/">
+<link rel="alternate" hreflang="en" href="https://yorkregionwebstudio.com/">
+<link rel="alternate" hreflang="zh-Hans" href="https://yorkregionwebstudio.com/zh/">
+<link rel="alternate" hreflang="x-default" href="https://yorkregionwebstudio.com/">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="York Region Web Studio">
@@ -22,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Manrope:wght@500;600;700;800&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.min.css?v=ds15">
+<link rel="stylesheet" href="styles.min.css?v=ds16">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -63,7 +66,7 @@
         {"@type": "Question", "name": "Can you rebuild my current site?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — we redesign and rebuild existing sites, and move your content over. Your domain and email stay yours and keep working."}},
         {"@type": "Question", "name": "Do I own my website?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The domain, the content and the design files are yours. We sign an NDA with every client, and everything is stored in Canada."}},
         {"@type": "Question", "name": "Can you help run the business side too, not just the website?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — that is the other half of what we do. Foxuma, our work hub, runs your leads, jobs, production, schedules, invoicing and payroll hours in one system, and your website plugs straight into it."}},
-        {"@type": "Question", "name": "Do you offer bookkeeping?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — bookkeeping and payroll prep together. Monthly bookkeeping for trades and small businesses on QuickBooks Online, in English or 普通话: bank feed posted and categorized, receipts digitized and filed, pay runs prepped, HST-ready records and a plain monthly summary. Plans are $99 to $199 a month with no setup fee; tax filing and year-end stay with your own accountant."}}
+        {"@type": "Question", "name": "Do you offer bookkeeping?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — bookkeeping and payroll prep together. Monthly bookkeeping for trades and small businesses on QuickBooks Online, in English or Mandarin: bank feed posted and categorized, receipts digitized and filed, pay runs prepped, HST-ready records and a plain monthly summary. Plans are $99 to $199 a month with no setup fee; tax filing and year-end stay with your own accountant."}}
       ]
     }
   ]
@@ -115,6 +118,10 @@
       <a href="#faq">FAQ</a>
       <a href="#contact" class="btn btn-primary">Request a Written Quote</a>
     </nav>
+    <select class="langswitch" name="language" aria-label="Language" onchange="if(this.value){window.location.href=this.value}">
+      <option value="" selected>English</option>
+      <option value="zh/index.html">简体中文</option>
+    </select>
   </div>
 </header>
 
@@ -131,7 +138,6 @@
     <div class="hero-actions">
       <a class="btn btn-primary" href="#contact">Request a Written Quote</a>
       <a class="btn btn-ghost" href="#templates">View Templates</a>
-      <a class="btn btn-ghost" href="#zh">中文介绍</a>
     </div>
   </div>
 </section>
@@ -263,10 +269,10 @@
     </div>
     <div class="feature-grid">
       <div class="feature-item"><h3>Websites</h3><p>Custom sites designed, built and launched — then hosted, backed up and updated for you on a monthly care plan.</p><span class="card-from">Build from $899 · Care $49/mo</span><br><a class="card-link" href="websites.html">See websites →</a></div>
-      <div class="feature-item"><h3>Bookkeeping &amp; Payroll</h3><p>Monthly books and payroll prep for trades: feed posted, receipts digitized, pay runs prepped — in English or 普通话.</p><span class="card-from">From $99/mo</span><br><a class="card-link" href="bookkeeping.html">See bookkeeping &amp; payroll →</a></div>
+      <div class="feature-item"><h3>Bookkeeping &amp; Payroll</h3><p>Monthly books and payroll prep for trades: feed posted, receipts digitized, pay runs prepped — in English or Mandarin.</p><span class="card-from">From $99/mo</span><br><a class="card-link" href="bookkeeping.html">See bookkeeping &amp; payroll →</a></div>
       <div class="feature-item"><h3>Growth Package</h3><p>Reviews that grow on their own, quotes chased until they close, after-hours calls answered, social kept alive.</p><span class="card-from">$249/mo</span><br><a class="card-link" href="growth.html">See the growth package →</a></div>
       <div class="feature-item"><h3>For Millwork &amp; Cabinet Shops</h3><p>Foxuma set up and taught, a branded estimator on your own site, remote estimating — built in a working shop.</p><span class="card-from">From $99/mo</span><br><a class="card-link" href="millwork.html">See the shop offers →</a></div>
-      <div class="feature-item"><h3>Products</h3><p>The Ontario Trades Paperwork Pack, the Newcomer Business Starter Kit (English + 中文）, and transcription by the minute.</p><span class="card-from">From $19</span><br><a class="card-link" href="products.html">See products →</a></div>
+      <div class="feature-item"><h3>Products</h3><p>The Ontario Trades Paperwork Pack, the Newcomer Business Starter Kit (English + Chinese), and transcription by the minute.</p><span class="card-from">From $19</span><br><a class="card-link" href="products.html">See products →</a></div>
     </div>
   </div>
 </section>
@@ -299,36 +305,11 @@
       <div class="faq-item"><h3>Can you rebuild my current site?</h3><p>Yes — we redesign and rebuild existing sites, and move your content over. Your domain and email stay yours and keep working.</p></div>
       <div class="faq-item"><h3>Do I own my website?</h3><p>Yes. The domain, the content and the design files are yours. We sign an NDA with every client, and everything is stored in Canada.</p></div>
       <div class="faq-item"><h3>Can you help run the business side too, not just the website?</h3><p>Yes — that is the other half of what we do. Foxuma, our work hub, runs your leads, jobs, production, schedules, invoicing and payroll hours in one system, and your website plugs straight into it. <a href="foxuma.html">More about Foxuma →</a></p></div>
-      <div class="faq-item"><h3>Do you offer bookkeeping?</h3><p>Yes — bookkeeping and payroll prep together. Monthly bookkeeping for trades and small businesses on QuickBooks Online, in English or 普通话： bank feed posted and categorized, receipts digitized and filed, pay runs prepped, HST-ready records and a plain monthly summary. Plans are $99 to $199 a month with no setup fee; tax filing and year-end stay with your own accountant. <a href="bookkeeping.html">More about bookkeeping &amp; payroll →</a></p></div>
+      <div class="faq-item"><h3>Do you offer bookkeeping?</h3><p>Yes — bookkeeping and payroll prep together. Monthly bookkeeping for trades and small businesses on QuickBooks Online, in English or Mandarin: bank feed posted and categorized, receipts digitized and filed, pay runs prepped, HST-ready records and a plain monthly summary. Plans are $99 to $199 a month with no setup fee; tax filing and year-end stay with your own accountant. <a href="bookkeeping.html">More about bookkeeping &amp; payroll →</a></p></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ 中文介绍 ══════════════ -->
-<section id="zh" lang="zh-Hans" aria-label="中文介绍">
-  <div class="wrap">
-    <div class="section-header">
-      <span class="eyebrow">中文介绍</span>
-      <h2>我们帮本地商家把网站做好、把账管好</h2>
-    </div>
-    <p>客户找一家商家之前，一般先看它的网站。网站打开慢、信息过时、手机上看不清，客户就直接找下一家了。</p>
-    <p>我们给约克区和大多伦多地区的商家做定制网站。网站 $899 起，之后每月 $49 托管维护：域名、备份、更新都由我们管，你不用碰任何后台。开工之前先给书面报价，没有隐藏加价。</p>
-    <p>我们也做记账和工资准备，每月 $99 到 $199：银行流水入账、收据归档、发薪数字提前备好。可以全程用普通话沟通。</p>
-    <p>如果你开的是工厂或店铺，我们还能帮你装 Foxuma——一套管工作的系统：客户、订单、生产排期、开票和工时都在一个地方，每月 $99。</p>
-    <h3>常见问题</h3>
-    <div class="faq-list">
-      <div class="faq-item"><h3>做一个网站多少钱？</h3><p>每个网站在简短通话后书面报价。价格看页数、功能和内容——你确认报价之后我们才开工，没有意外加价。</p></div>
-      <div class="faq-item"><h3>要多久？</h3><p>你的内容齐了之后，大多数网站两到四周上线。时间会在你的书面报价里确认。</p></div>
-      <div class="faq-item"><h3>我需要提供什么？</h3><p>有标志就给标志，还有你的文字和照片——没有的话我们帮你做。开始时一通短电话，上线前一轮确认。</p></div>
-      <div class="faq-item"><h3>上线后你们还管吗？</h3><p>管。托管、域名、更新、备份和小修改都由我们管，网站一直快、一直新。</p></div>
-      <div class="faq-item"><h3>能重做我现在的网站吗？</h3><p>可以——我们重新设计、重新制作，把你的内容搬过来。你的域名和邮箱还是你的，照常能用。</p></div>
-      <div class="faq-item"><h3>网站归我吗？</h3><p>归你。域名、内容和设计文件都是你的。我们和每个客户都签保密协议，所有资料存在加拿大。</p></div>
-      <div class="faq-item"><h3>除了网站，生意上的事也能帮吗？</h3><p>可以——那是我们做的另一半。Foxuma，我们的工作系统，把你的客户线索、工单、生产、排期、开票和工资工时管在一个系统里，你的网站直接接上它。<a href="foxuma.html">更多看 Foxuma 介绍 →</a></p></div>
-      <div class="faq-item"><h3>你们做记账吗？</h3><p>做——记账和工资准备一起做。用 QuickBooks Online 给手艺行业和小商家做每月记账，英文或普通话都可以：银行流水入账并分类、收据电子化归档、发薪数字提前备好、HST 资料随时能交、每月一份简单小结。套餐每月 $99 到 $199，没有开户费；报税和年结还是你自己的会计师做。<a href="bookkeeping.html">更多看记账与工资介绍 →</a></p></div>
-    </div>
-    <p>想先聊聊，发邮件到 info@yorkregionwebstudio.com，或者用下面的表格留言。我们一个工作日内回复。</p>
-  </div>
-</section>
 
 <!-- ══════════════ CONTACT ══════════════ -->
 <section class="contact-section" id="contact" aria-label="Contact">
@@ -421,7 +402,7 @@
 </footer>
 
 <a class="mobile-cta" href="#contact">Request a Written Quote</a>
-<script src="script.min.js?v=ds15" defer></script>
+<script src="script.min.js?v=ds16" defer></script>
 <script>
 (function(){var p=new URLSearchParams(location.search);var s=p.get('utm_source')||p.get('ref')||'';fetch('https://crm.newoodmillwork.com/api/website/hit/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({token:'7l3U62wA63Vgq4213Ah6P21Mx3800rvS',path:location.pathname,referrer:document.referrer||'',source:s}),keepalive:true}).catch(function(){});})();
 </script>

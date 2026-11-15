@@ -486,3 +486,7 @@ details.faq-item p{padding:0 var(--space-5) var(--space-4)}
 /* Reveal — slightly longer travel, same reduced-motion respect */
 .js-reveal .reveal{transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .js-reveal .reveal.in{transform:none}
+
+/* Language switch — mirrors foxuma.com (bordered select, header right) */
+.langswitch{flex:none;background:none;border:1px solid #cbd5e1;color:#334155;border-radius:7px;padding:4px 8px;cursor:pointer;font-family:var(--font-body);font-size:.9rem;line-height:1.4}
+@media (max-width:640px){.brand img{height:36px}.brand-name{font-size:.82rem}.langswitch{font-size:.8rem;padding:2px 5px}}
