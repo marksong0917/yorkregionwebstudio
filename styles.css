@@ -298,6 +298,7 @@ a.card:hover{transform:translateY(-4px);border-color:var(--brand-accent)}
   body.single-page .main-nav{position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--brand-dark);flex-direction:column;align-items:stretch;gap:0;padding:var(--space-4) var(--space-5);transform:translateX(100%);transition:transform var(--dur) var(--ease)}
   body.single-page .main-nav.open{transform:none}
   body.single-page .main-nav a{padding:var(--space-3) 0;border-bottom:1px solid var(--line-dark);font-size:1rem;color:var(--on-dark-82)}
+  body.single-page .main-nav a.btn{color:var(--white)}
   body.single-page .nav-toggle{display:block}
 }
 @media (max-width:760px){
@@ -450,6 +451,7 @@ details.faq-item p{padding:0 var(--space-5) var(--space-4)}
 .estimator-band,.cta-band{background-image:radial-gradient(640px 320px at 50% -60px,var(--accent-wash),transparent 70%)}
 .contact-section{background-image:radial-gradient(820px 420px at 88% -120px,color-mix(in srgb,var(--brand-accent) 20%,transparent),transparent 62%)}
 .features-band{background:linear-gradient(180deg,var(--paper-soft),var(--paper))}
+.kit-note a{text-decoration:underline;text-underline-offset:2px}
 .team-teaser{background:linear-gradient(180deg,var(--paper-soft),var(--paper))}
 
 /* Dark band (framework component: process / about on dark) */
