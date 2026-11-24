@@ -451,7 +451,7 @@ details.faq-item p{padding:0 var(--space-5) var(--space-4)}
 .estimator-band,.cta-band{background-image:radial-gradient(640px 320px at 50% -60px,var(--accent-wash),transparent 70%)}
 .contact-section{background-image:radial-gradient(820px 420px at 88% -120px,color-mix(in srgb,var(--brand-accent) 20%,transparent),transparent 62%)}
 .features-band{background:linear-gradient(180deg,var(--paper-soft),var(--paper))}
-.kit-note a{text-decoration:underline;text-underline-offset:2px}
+p a{text-decoration:underline;text-underline-offset:2px}
 .team-teaser{background:linear-gradient(180deg,var(--paper-soft),var(--paper))}
 
 /* Dark band (framework component: process / about on dark) */
